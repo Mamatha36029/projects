@@ -1,0 +1,2272 @@
+[
+  {
+    "crop": "AshGourd",
+    "name": "AshGourd Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects AshGourd crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "AshGourd",
+    "name": "AshGourd Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects AshGourd crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Bamboo",
+    "name": "Bamboo Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Bamboo crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Bamboo",
+    "name": "Bamboo Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Bamboo crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Barley",
+    "name": "Barley Leaf rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Barley crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Hexaconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Barley",
+    "name": "Barley Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Barley crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "BlackGram",
+    "name": "BlackGram Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects BlackGram crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "BlackGram",
+    "name": "BlackGram Yellow mosaic",
+    "type": "Viral",
+    "severity": "Medium",
+    "info": "Commonly affects BlackGram crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Yellow mosaic on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Imidacloprid according to manufacturer instructions."
+  },
+  {
+    "crop": "BottlePalm",
+    "name": "BottlePalm Bud rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects BottlePalm crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Bud rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Bordeaux Mixture according to manufacturer instructions."
+  },
+  {
+    "crop": "BottlePalm",
+    "name": "BottlePalm Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects BottlePalm crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Broccoli",
+    "name": "Broccoli Black rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Broccoli crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Black rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "Broccoli",
+    "name": "Broccoli Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Broccoli crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Cassava",
+    "name": "Cassava Mosaic virus",
+    "type": "Viral",
+    "severity": "Medium",
+    "info": "Commonly affects Cassava crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Mosaic virus on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Imidacloprid according to manufacturer instructions."
+  },
+  {
+    "crop": "Cassava",
+    "name": "Cassava Bacterial blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Cassava crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Bacterial blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Streptomycin according to manufacturer instructions."
+  },
+  {
+    "crop": "Celery",
+    "name": "Celery Early blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Celery crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Early blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Celery",
+    "name": "Celery Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Celery crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "Chickpea",
+    "name": "Chickpea Ascochyta blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Chickpea crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Ascochyta blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Chickpea",
+    "name": "Chickpea Wilt",
+    "type": "Bacterial",
+    "severity": "Medium",
+    "info": "Commonly affects Chickpea crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Wilt on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Trichoderma according to manufacturer instructions."
+  },
+  {
+    "crop": "Cinnamon",
+    "name": "Cinnamon Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Cinnamon crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Cinnamon",
+    "name": "Cinnamon Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Cinnamon crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Clove",
+    "name": "Clove Leaf rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Clove crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "Clove",
+    "name": "Clove Stem bleeding",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Clove crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Stem bleeding on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Bordeaux Mixture according to manufacturer instructions."
+  },
+  {
+    "crop": "Cocoa",
+    "name": "Cocoa Black pod rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Cocoa crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Black pod rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Cocoa",
+    "name": "Cocoa Swollen shoot virus",
+    "type": "Viral",
+    "severity": "Medium",
+    "info": "Commonly affects Cocoa crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Swollen shoot virus on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Imidacloprid according to manufacturer instructions."
+  },
+  {
+    "crop": "Cowpea",
+    "name": "Cowpea Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Cowpea crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Aster",
+    "name": "Aster Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Aster crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Aster",
+    "name": "Aster Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Aster crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Bean",
+    "name": "Bean Angular leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Bean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Angular leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "Bean",
+    "name": "Bean Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Bean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "BellFlower",
+    "name": "BellFlower Root rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects BellFlower crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Root rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "BellFlower",
+    "name": "BellFlower Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects BellFlower crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Blackberry",
+    "name": "Blackberry Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Blackberry crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Blackberry",
+    "name": "Blackberry Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Blackberry crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Hexaconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Cactus",
+    "name": "Cactus Stem rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Cactus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Stem rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "Cactus",
+    "name": "Cactus Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Cactus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Calendula",
+    "name": "Calendula Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Calendula crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Calendula",
+    "name": "Calendula Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Calendula crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "Camellia",
+    "name": "Camellia Blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Camellia crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "Camellia",
+    "name": "Camellia Root rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Camellia crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Root rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Canna",
+    "name": "Canna Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Canna crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Canna",
+    "name": "Canna Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Canna crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Carambola",
+    "name": "Carambola Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Carambola crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Carambola",
+    "name": "Carambola Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Carambola crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Carnation",
+    "name": "Carnation Wilt",
+    "type": "Bacterial",
+    "severity": "Medium",
+    "info": "Commonly affects Carnation crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Wilt on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Carnation",
+    "name": "Carnation Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Carnation crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Cassia",
+    "name": "Cassia Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Cassia crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Cassia",
+    "name": "Cassia Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Cassia crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Catnip",
+    "name": "Catnip Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Catnip crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "Catnip",
+    "name": "Catnip Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Catnip crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Wettable Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "CauliflowerGreen",
+    "name": "CauliflowerGreen Black rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects CauliflowerGreen crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Black rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Streptomycin according to manufacturer instructions."
+  },
+  {
+    "crop": "CauliflowerGreen",
+    "name": "CauliflowerGreen Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects CauliflowerGreen crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Celosia",
+    "name": "Celosia Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Celosia crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Celosia",
+    "name": "Celosia Stem rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Celosia crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Stem rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Chervil",
+    "name": "Chervil Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Chervil crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Chervil",
+    "name": "Chervil Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Chervil crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "Chicory",
+    "name": "Chicory Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Chicory crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Chicory",
+    "name": "Chicory Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Chicory crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "ChristmasCactus",
+    "name": "ChristmasCactus Root rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects ChristmasCactus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Root rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Fosetyl Al according to manufacturer instructions."
+  },
+  {
+    "crop": "ChristmasCactus",
+    "name": "ChristmasCactus Stem blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects ChristmasCactus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Stem blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Cilantro",
+    "name": "Cilantro Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Cilantro crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Cilantro",
+    "name": "Cilantro Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Cilantro crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "Coleus",
+    "name": "Coleus Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Coleus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "Coleus",
+    "name": "Coleus Root rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Coleus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Root rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "CollardGreens",
+    "name": "CollardGreens Alternaria leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects CollardGreens crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Alternaria leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "CollardGreens",
+    "name": "CollardGreens Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects CollardGreens crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Croton",
+    "name": "Croton Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Croton crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Croton",
+    "name": "Croton Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Croton crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Dandelion",
+    "name": "Dandelion Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Dandelion crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Dandelion",
+    "name": "Dandelion Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Dandelion crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Dieffenbachia",
+    "name": "Dieffenbachia Stem rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Dieffenbachia crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Stem rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Dieffenbachia",
+    "name": "Dieffenbachia Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Dieffenbachia crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "Eggplant",
+    "name": "Eggplant Verticillium wilt",
+    "type": "Bacterial",
+    "severity": "Medium",
+    "info": "Commonly affects Eggplant crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Verticillium wilt on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Trichoderma according to manufacturer instructions."
+  },
+  {
+    "crop": "Eggplant",
+    "name": "Eggplant Fruit rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Eggplant crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Fruit rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Captan according to manufacturer instructions."
+  },
+  {
+    "crop": "ElephantFootYam",
+    "name": "ElephantFootYam Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects ElephantFootYam crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "ElephantFootYam",
+    "name": "ElephantFootYam Stem rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects ElephantFootYam crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Stem rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Elderberry",
+    "name": "Elderberry Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Elderberry crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Elderberry",
+    "name": "Elderberry Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Elderberry crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Ficus",
+    "name": "Ficus Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Ficus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Ficus",
+    "name": "Ficus Root rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Ficus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Root rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Fosetyl Al according to manufacturer instructions."
+  },
+  {
+    "crop": "Foxglove",
+    "name": "Foxglove Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Foxglove crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Foxglove",
+    "name": "Foxglove Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Foxglove crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Gardenia",
+    "name": "Gardenia Sooty mold",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Gardenia crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Sooty mold on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Neem Oil according to manufacturer instructions."
+  },
+  {
+    "crop": "Gardenia",
+    "name": "Gardenia Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Gardenia crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "Gladiolus",
+    "name": "Gladiolus Corm rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Gladiolus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Corm rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Gladiolus",
+    "name": "Gladiolus Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Gladiolus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "Guar",
+    "name": "Guar Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Guar crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Guar",
+    "name": "Guar Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Guar crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Hollyhock",
+    "name": "Hollyhock Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Hollyhock crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Hollyhock",
+    "name": "Hollyhock Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Hollyhock crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "Honeydew",
+    "name": "Honeydew Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Honeydew crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Honeydew",
+    "name": "Honeydew Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Honeydew crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Impatiens",
+    "name": "Impatiens Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Impatiens crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Impatiens",
+    "name": "Impatiens Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Impatiens crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "IvyGourd",
+    "name": "IvyGourd Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects IvyGourd crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Wettable Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "IvyGourd",
+    "name": "IvyGourd Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects IvyGourd crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Jalapeno",
+    "name": "Jalapeno Bacterial spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Jalapeno crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Bacterial spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Streptomycin according to manufacturer instructions."
+  },
+  {
+    "crop": "Jalapeno",
+    "name": "Jalapeno Leaf curl",
+    "type": "Viral",
+    "severity": "Medium",
+    "info": "Commonly affects Jalapeno crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf curl on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Imidacloprid according to manufacturer instructions."
+  },
+  {
+    "crop": "Jute",
+    "name": "Jute Stem rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Jute crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Stem rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Jute",
+    "name": "Jute Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Jute crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Kiwano",
+    "name": "Kiwano Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Kiwano crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "Kiwano",
+    "name": "Kiwano Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Kiwano crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "LadyFinger",
+    "name": "LadyFinger Yellow vein mosaic",
+    "type": "Viral",
+    "severity": "Medium",
+    "info": "Commonly affects LadyFinger crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Yellow vein mosaic on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Imidacloprid according to manufacturer instructions."
+  },
+  {
+    "crop": "LadyFinger",
+    "name": "LadyFinger Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects LadyFinger crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Leucaena",
+    "name": "Leucaena Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Leucaena crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Leucaena",
+    "name": "Leucaena Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Leucaena crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "Lupin",
+    "name": "Lupin Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Lupin crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Lupin",
+    "name": "Lupin Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Lupin crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Mandarin",
+    "name": "Mandarin Citrus canker",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Mandarin crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Citrus canker on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Mandarin",
+    "name": "Mandarin Greening",
+    "type": "Viral",
+    "severity": "Medium",
+    "info": "Commonly affects Mandarin crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Greening on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Imidacloprid according to manufacturer instructions."
+  },
+  {
+    "crop": "Mangosteen",
+    "name": "Mangosteen Fruit rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Mangosteen crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Fruit rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Captan according to manufacturer instructions."
+  },
+  {
+    "crop": "Mangosteen",
+    "name": "Mangosteen Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Mangosteen crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Mesquite",
+    "name": "Mesquite Wilt",
+    "type": "Bacterial",
+    "severity": "Medium",
+    "info": "Commonly affects Mesquite crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Wilt on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Mesquite",
+    "name": "Mesquite Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Mesquite crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "Moonflower",
+    "name": "Moonflower Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Moonflower crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Moonflower",
+    "name": "Moonflower Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Moonflower crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "MorningGlory",
+    "name": "MorningGlory Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects MorningGlory crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "MorningGlory",
+    "name": "MorningGlory Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects MorningGlory crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "MothBean",
+    "name": "MothBean Yellow mosaic",
+    "type": "Viral",
+    "severity": "Medium",
+    "info": "Commonly affects MothBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Yellow mosaic on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Imidacloprid according to manufacturer instructions."
+  },
+  {
+    "crop": "MothBean",
+    "name": "MothBean Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects MothBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Nerium",
+    "name": "Nerium Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Nerium crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Nerium",
+    "name": "Nerium Root rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Nerium crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Root rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "OkraGreen",
+    "name": "OkraGreen Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects OkraGreen crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "OkraGreen",
+    "name": "OkraGreen Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects OkraGreen crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "OrnamentalPepper",
+    "name": "OrnamentalPepper Bacterial spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects OrnamentalPepper crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Bacterial spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Streptomycin according to manufacturer instructions."
+  },
+  {
+    "crop": "OrnamentalPepper",
+    "name": "OrnamentalPepper Leaf curl",
+    "type": "Viral",
+    "severity": "Medium",
+    "info": "Commonly affects OrnamentalPepper crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf curl on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Imidacloprid according to manufacturer instructions."
+  },
+  {
+    "crop": "Palm",
+    "name": "Palm Bud rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Palm crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Bud rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Bordeaux Mixture according to manufacturer instructions."
+  },
+  {
+    "crop": "Palm",
+    "name": "Palm Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Palm crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "PassionFruit",
+    "name": "PassionFruit Wilt",
+    "type": "Bacterial",
+    "severity": "Medium",
+    "info": "Commonly affects PassionFruit crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Wilt on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "PassionFruit",
+    "name": "PassionFruit Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects PassionFruit crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Peony",
+    "name": "Peony Gray mold",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Peony crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Gray mold on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "Peony",
+    "name": "Peony Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Peony crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Phlox",
+    "name": "Phlox Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Phlox crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Wettable Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Phlox",
+    "name": "Phlox Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Phlox crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Pistachio",
+    "name": "Pistachio Alternaria blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Pistachio crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Alternaria blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Pistachio",
+    "name": "Pistachio Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Pistachio crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "Plantain",
+    "name": "Plantain Black sigatoka",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Plantain crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Black sigatoka on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Plantain",
+    "name": "Plantain Panama disease",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Plantain crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Panama disease on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Plumeria",
+    "name": "Plumeria Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Plumeria crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Hexaconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Plumeria",
+    "name": "Plumeria Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Plumeria crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Purslane",
+    "name": "Purslane Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Purslane crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Purslane",
+    "name": "Purslane Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Purslane crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "Rambutan",
+    "name": "Rambutan Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Rambutan crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Rambutan",
+    "name": "Rambutan Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Rambutan crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "RedCabbage",
+    "name": "RedCabbage Black rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects RedCabbage crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Black rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Streptomycin according to manufacturer instructions."
+  },
+  {
+    "crop": "RedCabbage",
+    "name": "RedCabbage Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects RedCabbage crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Sage",
+    "name": "Sage Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Sage crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Sage",
+    "name": "Sage Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Sage crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "SnakeBean",
+    "name": "SnakeBean Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects SnakeBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "SnakeBean",
+    "name": "SnakeBean Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects SnakeBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Tatsoi",
+    "name": "Tatsoi Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Tatsoi crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Tatsoi",
+    "name": "Tatsoi Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Tatsoi crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "WhiteEggplant",
+    "name": "WhiteEggplant Wilt",
+    "type": "Bacterial",
+    "severity": "Medium",
+    "info": "Commonly affects WhiteEggplant crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Wilt on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "WhiteEggplant",
+    "name": "WhiteEggplant Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects WhiteEggplant crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "YellowCapsicum",
+    "name": "YellowCapsicum Bacterial spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects YellowCapsicum crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Bacterial spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Streptomycin according to manufacturer instructions."
+  },
+  {
+    "crop": "YellowCapsicum",
+    "name": "YellowCapsicum Leaf curl",
+    "type": "Viral",
+    "severity": "Medium",
+    "info": "Commonly affects YellowCapsicum crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf curl on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Imidacloprid according to manufacturer instructions."
+  },
+  {
+    "crop": "ZebraPlant",
+    "name": "ZebraPlant Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects ZebraPlant crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Amaranthus",
+    "name": "Amaranthus Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Amaranthus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Arugula",
+    "name": "Arugula Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Arugula crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Arugula",
+    "name": "Arugula Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Arugula crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "BokChoy",
+    "name": "BokChoy Black rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects BokChoy crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Black rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Streptomycin according to manufacturer instructions."
+  },
+  {
+    "crop": "BokChoy",
+    "name": "BokChoy Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects BokChoy crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "BroadBean",
+    "name": "BroadBean Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects BroadBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "BroadBean",
+    "name": "BroadBean Chocolate spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects BroadBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Chocolate spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "Caper",
+    "name": "Caper Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Caper crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "Caper",
+    "name": "Caper Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Caper crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Chayote",
+    "name": "Chayote Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Chayote crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Wettable Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Chayote",
+    "name": "Chayote Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Chayote crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "ChineseCabbage",
+    "name": "ChineseCabbage Soft rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects ChineseCabbage crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Soft rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "ChineseCabbage",
+    "name": "ChineseCabbage Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects ChineseCabbage crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "ClusterBean",
+    "name": "ClusterBean Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects ClusterBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "ClusterBean",
+    "name": "ClusterBean Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects ClusterBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Daffodil",
+    "name": "Daffodil Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Daffodil crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Daffodil",
+    "name": "Daffodil Bulb rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Daffodil crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Bulb rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "Endive",
+    "name": "Endive Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Endive crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Endive",
+    "name": "Endive Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Endive crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "GardenPea",
+    "name": "GardenPea Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects GardenPea crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "GardenPea",
+    "name": "GardenPea Wilt",
+    "type": "Bacterial",
+    "severity": "Medium",
+    "info": "Commonly affects GardenPea crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Wilt on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "HyacinthBean",
+    "name": "HyacinthBean Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects HyacinthBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "HyacinthBean",
+    "name": "HyacinthBean Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects HyacinthBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "IcebergLettuce",
+    "name": "IcebergLettuce Bottom rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects IcebergLettuce crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Bottom rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Captan according to manufacturer instructions."
+  },
+  {
+    "crop": "IcebergLettuce",
+    "name": "IcebergLettuce Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects IcebergLettuce crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "IndianGooseberry",
+    "name": "IndianGooseberry Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects IndianGooseberry crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "IndianGooseberry",
+    "name": "IndianGooseberry Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects IndianGooseberry crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "JerusalemArtichoke",
+    "name": "JerusalemArtichoke Stem rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects JerusalemArtichoke crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Stem rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "JerusalemArtichoke",
+    "name": "JerusalemArtichoke Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects JerusalemArtichoke crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "Kohlrabi",
+    "name": "Kohlrabi Black rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Kohlrabi crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Black rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Streptomycin according to manufacturer instructions."
+  },
+  {
+    "crop": "Kohlrabi",
+    "name": "Kohlrabi Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Kohlrabi crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "LimaBean",
+    "name": "LimaBean Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects LimaBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Hexaconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "LimaBean",
+    "name": "LimaBean Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects LimaBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "LongBean",
+    "name": "LongBean Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects LongBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "LongBean",
+    "name": "LongBean Mosaic virus",
+    "type": "Viral",
+    "severity": "Medium",
+    "info": "Commonly affects LongBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Mosaic virus on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Imidacloprid according to manufacturer instructions."
+  },
+  {
+    "crop": "LotusStem",
+    "name": "LotusStem Rhizome rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects LotusStem crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rhizome rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "LotusStem",
+    "name": "LotusStem Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects LotusStem crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "Methi",
+    "name": "Methi Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Methi crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Methi",
+    "name": "Methi Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Methi crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "NapaCabbage",
+    "name": "NapaCabbage Soft rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects NapaCabbage crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Soft rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "NapaCabbage",
+    "name": "NapaCabbage Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects NapaCabbage crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Parsnip",
+    "name": "Parsnip Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Parsnip crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Parsnip",
+    "name": "Parsnip Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Parsnip crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "PointedGourd",
+    "name": "PointedGourd Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects PointedGourd crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "PointedGourd",
+    "name": "PointedGourd Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects PointedGourd crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "RidgeGourd",
+    "name": "RidgeGourd Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects RidgeGourd crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "RidgeGourd",
+    "name": "RidgeGourd Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects RidgeGourd crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Wettable Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Romanesco",
+    "name": "Romanesco Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Romanesco crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Romanesco",
+    "name": "Romanesco Black rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects Romanesco crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Black rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Streptomycin according to manufacturer instructions."
+  },
+  {
+    "crop": "Shallot",
+    "name": "Shallot Purple blotch",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Shallot crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Purple blotch on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Shallot",
+    "name": "Shallot Stemphylium blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Shallot crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Stemphylium blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "Sorrel",
+    "name": "Sorrel Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Sorrel crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "Sorrel",
+    "name": "Sorrel Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Sorrel crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "SpringOnion",
+    "name": "SpringOnion Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects SpringOnion crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "SpringOnion",
+    "name": "SpringOnion Purple blotch",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects SpringOnion crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Purple blotch on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "SwissChard",
+    "name": "SwissChard Cercospora leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects SwissChard crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Cercospora leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Fungicide according to manufacturer instructions."
+  },
+  {
+    "crop": "SwissChard",
+    "name": "SwissChard Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects SwissChard crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "Tinda",
+    "name": "Tinda Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Tinda crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Tinda",
+    "name": "Tinda Leaf blight",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Tinda crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf blight on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "TurnipGreens",
+    "name": "TurnipGreens White rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects TurnipGreens crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with White rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Chlorothalonil according to manufacturer instructions."
+  },
+  {
+    "crop": "TurnipGreens",
+    "name": "TurnipGreens Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects TurnipGreens crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  },
+  {
+    "crop": "WaterCress",
+    "name": "WaterCress Downy mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects WaterCress crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Downy mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Metalaxyl according to manufacturer instructions."
+  },
+  {
+    "crop": "WaterCress",
+    "name": "WaterCress Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects WaterCress crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "WaxGourd",
+    "name": "WaxGourd Anthracnose",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects WaxGourd crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Anthracnose on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Carbendazim according to manufacturer instructions."
+  },
+  {
+    "crop": "WaxGourd",
+    "name": "WaxGourd Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects WaxGourd crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "WingedBean",
+    "name": "WingedBean Rust",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects WingedBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Rust on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Propiconazole according to manufacturer instructions."
+  },
+  {
+    "crop": "WingedBean",
+    "name": "WingedBean Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects WingedBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Hydroxide according to manufacturer instructions."
+  },
+  {
+    "crop": "YamBean",
+    "name": "YamBean Root rot",
+    "type": "Fungal",
+    "severity": "High",
+    "info": "Commonly affects YamBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Root rot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Fosetyl Al according to manufacturer instructions."
+  },
+  {
+    "crop": "YamBean",
+    "name": "YamBean Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects YamBean crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Mancozeb according to manufacturer instructions."
+  },
+  {
+    "crop": "Ziziphus",
+    "name": "Ziziphus Powdery mildew",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Ziziphus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Powdery mildew on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Wettable Sulfur according to manufacturer instructions."
+  },
+  {
+    "crop": "Ziziphus",
+    "name": "Ziziphus Leaf spot",
+    "type": "Fungal",
+    "severity": "Medium",
+    "info": "Commonly affects Ziziphus crops, leading to significant yield loss if untreated.",
+    "symptoms": "Characteristic patches, discoloration, or lesions associated with Leaf spot on leaves and stems.",
+    "prevention": "Use disease-free seeds, maintain proper spacing, avoid waterlogging, and remove infected plant debris.",
+    "treatment": "Apply Copper Oxychloride according to manufacturer instructions."
+  }
+]
