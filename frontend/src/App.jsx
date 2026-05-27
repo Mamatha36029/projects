@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import { Leaf } from 'lucide-react';
 import Home from './pages/Home';
 import Results from './pages/Results';
@@ -32,6 +32,7 @@ function App() {
 
   const handleLogout = () => {
     localStorage.removeItem('user');
+    localStorage.removeItem('isAdmin');
     window.location.href = '/login';
   };
 
@@ -55,6 +56,7 @@ function App() {
               <Link to="/marketplace" className="nav-link">Marketplace</Link>
               <Link to="/marketing" className="nav-link">Insights</Link>
               <Link to="/about" className="nav-link">About Us</Link>
+              <Link to="/admin-login" className="nav-link">Admin Login</Link>
               <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.1)' }} />
               <button onClick={handleLogout} className="btn btn-secondary" style={{ padding: '8px 20px', fontSize: '0.9rem', border: '1px solid rgba(239, 68, 68, 0.2)', color: '#fda4af' }}>
                 Sign Out
@@ -71,7 +73,7 @@ function App() {
           <Route path="/marketplace" element={user ? <Marketplace /> : <Login />} />
           <Route path="/encyclopedia" element={user ? <Encyclopedia /> : <Login />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin" element={localStorage.getItem('isAdmin') === 'true' ? <AdminDashboard /> : <Navigate to="/admin-login" replace />} />
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/marketing" element={user ? <MarketingDashboard /> : <Login />} />
           <Route path="/about" element={user ? <AboutUs /> : <Login />} />

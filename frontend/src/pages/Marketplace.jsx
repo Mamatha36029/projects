@@ -6,6 +6,52 @@ import logo from '../assets/agriguard_logo.png';
 import bottlePlaceholder from '../assets/bottle_placeholder.png';
 import pesticideImg from '../assets/pesticide_placeholder.png';
 
+// Fallback sample pesticides (used if API fetch fails)
+const samplePesticides = [
+  {
+    id: 'p1',
+    name: 'EcoGuard Neem Oil',
+    price: 150,
+    image: pesticideImg,
+    target: 'Insecticide',
+    type: 'Liquid',
+    rating: 4.5,
+    reviews: 112,
+    discount: 10,
+    vendor: 'AgroVision',
+    marketPrice: 170,
+    description: 'Organic neem oil for pest control.'
+  },
+  {
+    id: 'p2',
+    name: 'HerbClear Powder',
+    price: 120,
+    image: pesticideImg,
+    target: 'Weed',
+    type: 'Powder',
+    rating: 4.2,
+    reviews: 98,
+    discount: 5,
+    vendor: 'AgroVision',
+    marketPrice: 130,
+    description: 'Effective powder herbicide.'
+  },
+  {
+    id: 'p3',
+    name: 'FungiStop Fungicide',
+    price: 200,
+    image: pesticideImg,
+    target: 'Fungal',
+    type: 'Liquid',
+    rating: 4.8,
+    reviews: 75,
+    discount: 15,
+    vendor: 'AgroVision',
+    marketPrice: 230,
+    description: 'Broad‑spectrum fungicide.'
+  }
+];
+
 const Marketplace = () => {
   const location = useLocation();
   const [searchTerm, setSearchTerm] = useState(location.state?.search || '');
@@ -13,7 +59,7 @@ const Marketplace = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState('online');
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(samplePesticides);
   const [datasets, setDatasets] = useState([]);
   const [activeTab, setActiveTab] = useState('pesticides');
   const [loading, setLoading] = useState(true);
@@ -301,7 +347,7 @@ const Marketplace = () => {
                   cart.map(item => (
                     <div key={item.id} style={{ display: 'flex', gap: '16px', background: 'rgba(255,255,255,0.02)', padding: '16px', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
                       <div style={{ width: '70px', height: '70px', borderRadius: '12px', overflow: 'hidden' }}>
-                        <img src={item.image} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1592419044706-39796d40f98c?q=80&w=200'; }} />
+                        <img src={item.image} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { e.target.src = bottlePlaceholder; }} />
                       </div>
                       <div style={{ flex: 1 }}>
                         <h4 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>{item.name}</h4>

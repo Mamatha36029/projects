@@ -5,8 +5,11 @@ import { motion } from 'framer-motion';
 const AdminDashboard = () => {
   const navigate = useNavigate();
 
-  const [stats, setStats] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
+  const [stats, setStats] = React.useState(() => {
+    const saved = localStorage.getItem('adminStats');
+    return saved ? JSON.parse(saved) : null;
+  });
+  const [loading, setLoading] = React.useState(!stats);
 
   useEffect(() => {
     if (localStorage.getItem('isAdmin') !== 'true') {
@@ -26,13 +29,22 @@ const AdminDashboard = () => {
       });
   }, [navigate]);
 
-  if (loading || !stats) {
+  if (loading && !stats) {
     return (
       <div className="container" style={{ padding: '40px 24px', textAlign: 'center' }}>
         <h2>Loading Admin Data from MongoDB...</h2>
       </div>
     );
   }
+
+  if (!stats) {
+    return (
+      <div className="container" style={{ padding: '40px 24px', textAlign: 'center' }}>
+        <h2>No admin data available.</h2>
+      </div>
+    );
+  }
+
 
   return (
     <div className="container" style={{ padding: '40px 24px' }}>

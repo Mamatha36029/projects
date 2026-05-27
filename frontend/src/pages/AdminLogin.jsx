@@ -10,7 +10,7 @@ const AdminLogin = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    if (username === 'vishwa' && password === 'vishwa123') {
+    if (username.trim().toLowerCase() === 'vishwa' && password.trim() === 'vishwa123') {
       // Store admin flag
       localStorage.setItem('isAdmin', 'true');
 
