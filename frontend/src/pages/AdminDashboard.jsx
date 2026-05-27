@@ -3,13 +3,24 @@ import { Users, AlertTriangle, CheckCircle, Store, BarChart, Camera, QrCode, Loc
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 const AdminDashboard = () => {
+  // Default placeholder stats shown before real data loads
+  const defaultStats = {
+    totalFarmers: 0,
+    diseasesDetected: 0,
+    totalSales: 0,
+    farmersLoggedIn: 0,
+    systemStatus: { uptime: 99.9, health: 100, load: 65 },
+    recentStock: [],
+    recentPurchases: [],
+    recentActivity: []
+  };
+
   const navigate = useNavigate();
 
-  const [stats, setStats] = React.useState(() => {
-    const saved = localStorage.getItem('adminStats');
-    return saved ? JSON.parse(saved) : null;
-  });
-  const [loading, setLoading] = React.useState(!stats);
+  const savedStats = localStorage.getItem('adminStats');
+  const [stats, setStats] = React.useState(() => savedStats ? JSON.parse(savedStats) : defaultStats);
+  const [loading, setLoading] = React.useState(!savedStats);
+
 
   useEffect(() => {
     if (localStorage.getItem('isAdmin') !== 'true') {

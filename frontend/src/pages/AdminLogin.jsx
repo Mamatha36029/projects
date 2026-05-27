@@ -28,6 +28,16 @@ const AdminLogin = () => {
         console.error('Logging failed', err);
       }
 
+      // After successful login, preload admin stats so the dashboard shows data immediately
+      try {
+        const statsRes = await fetch('/api/admin/stats');
+        if (statsRes.ok) {
+          const statsData = await statsRes.json();
+          localStorage.setItem('adminStats', JSON.stringify(statsData));
+        }
+      } catch (e) {
+        console.error('Failed to preload admin stats', e);
+      }
       navigate('/admin');
     } else {
       alert('Invalid admin credentials');
