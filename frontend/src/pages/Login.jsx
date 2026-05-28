@@ -172,9 +172,6 @@ const Login = () => {
             </motion.button>
           </form>
 
-          <div style={{ marginTop: '40px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
-            Don't have an account? <span style={{ color: 'var(--primary)', fontWeight: '700', cursor: 'pointer' }}>Contact your local Hub</span>
-          </div>
         </motion.div>
       </div>
     </div>
