@@ -5,12 +5,27 @@ import { useNavigate } from 'react-router-dom';
 
 const MarketingDashboard = () => {
   const navigate = useNavigate();
-  const [metrics] = useState({
-    totalUsers: 14250,
-    activeUsers: 8940,
-    newStock: 342,
-    expiredStock: 12
+  const [metrics, setMetrics] = useState({
+    totalUsers: 0,
+    activeUsers: 0,
+    newStock: 0,
+    expiredStock: 0
   });
+
+  React.useEffect(() => {
+    fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/admin/stats`)
+      .then(res => res.json())
+      .then(data => {
+        setMetrics(prev => ({
+          ...prev,
+          totalUsers: data.totalFarmers || 0,
+          activeUsers: data.farmersLoggedIn || 0,
+          newStock: (data.recentStock || []).length || 0,
+          expiredStock: 0 // Mock value as this isn't dynamic yet
+        }));
+      })
+      .catch(err => console.error('Failed to fetch insights data', err));
+  }, []);
 
   return (
     <div className="container" style={{ 
