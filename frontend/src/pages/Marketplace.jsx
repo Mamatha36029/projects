@@ -60,6 +60,7 @@ const Marketplace = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState('online');
+  const [bookingPaymentMethod, setBookingPaymentMethod] = useState('online');
   const [products, setProducts] = useState(samplePesticides);
   const [datasets, setDatasets] = useState([]);
   const [activeTab, setActiveTab] = useState('pesticides');
@@ -578,6 +579,73 @@ const Marketplace = () => {
                 </div>
                 <div style={{ background: 'rgba(16, 185, 129, 0.1)', padding: '16px', borderRadius: '12px', border: '1px solid rgba(16, 185, 129, 0.2)', marginBottom: '12px' }}>
                    <p style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '0.9rem' }}>Service Fee: ₹1,200 per acre (Includes equipment & labor)</p>
+                </div>
+
+                <div>
+                  <h3 style={{ marginBottom: '16px', fontSize: '1.1rem', fontWeight: '700' }}>Select Payment Method</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '20px' }}>
+                    <div 
+                      onClick={() => setBookingPaymentMethod('online')}
+                      style={{ 
+                        padding: '16px', 
+                        borderRadius: '12px', 
+                        background: bookingPaymentMethod === 'online' ? 'rgba(16, 185, 129, 0.1)' : 'rgba(255,255,255,0.02)', 
+                        border: `1px solid ${bookingPaymentMethod === 'online' ? 'var(--primary)' : 'rgba(255,255,255,0.1)'}`,
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '12px',
+                        transition: 'all 0.3s ease'
+                      }}
+                    >
+                      <QrCode size={24} color={bookingPaymentMethod === 'online' ? 'var(--primary)' : 'var(--text-muted)'} />
+                      <div>
+                        <div style={{ fontWeight: '700', color: 'white', fontSize: '0.95rem' }}>Scan & Pay</div>
+                        <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>UPI / PhonePe</div>
+                      </div>
+                    </div>
+
+                    <div 
+                      onClick={() => setBookingPaymentMethod('cod')}
+                      style={{ 
+                        padding: '16px', 
+                        borderRadius: '12px', 
+                        background: bookingPaymentMethod === 'cod' ? 'rgba(16, 185, 129, 0.1)' : 'rgba(255,255,255,0.02)', 
+                        border: `1px solid ${bookingPaymentMethod === 'cod' ? 'var(--primary)' : 'rgba(255,255,255,0.1)'}`,
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '12px',
+                        transition: 'all 0.3s ease'
+                      }}
+                    >
+                      <Banknote size={24} color={bookingPaymentMethod === 'cod' ? 'var(--primary)' : 'var(--text-muted)'} />
+                      <div>
+                        <div style={{ fontWeight: '700', color: 'white', fontSize: '0.95rem' }}>Pay on Arrival</div>
+                        <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Cash</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {bookingPaymentMethod === 'online' && (
+                    <motion.div 
+                      initial={{ opacity: 0, y: 10 }} 
+                      animate={{ opacity: 1, y: 0 }} 
+                      style={{ 
+                        textAlign: 'center', 
+                        padding: '24px', 
+                        background: 'rgba(15, 23, 42, 0.6)', 
+                        borderRadius: '16px', 
+                        border: '1px solid rgba(255,255,255,0.05)',
+                        marginBottom: '20px'
+                      }}
+                    >
+                      <div style={{ position: 'relative', width: '220px', height: '300px', margin: '0 auto', background: 'white', padding: '12px', borderRadius: '16px', overflow: 'hidden' }}>
+                        <img src={upiQR} alt="Razorpay UPI QR" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                      </div>
+                      <p style={{ marginTop: '16px', color: 'var(--primary)', fontSize: '0.85rem', fontWeight: 'bold' }}>Awaiting secure verification...</p>
+                    </motion.div>
+                  )}
                 </div>
                 <motion.button 
                   whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
