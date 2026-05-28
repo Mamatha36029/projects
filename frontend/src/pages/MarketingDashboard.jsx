@@ -111,7 +111,6 @@ const MarketingDashboard = () => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
               { label: 'PlantVillage Dataset', status: 'Fully Integrated', count: '38 Classes' },
-              { label: 'ResNet50 Model', status: 'Active', count: '94.2% Acc' },
               { label: 'Cloud Storage', status: 'Connected', count: '1.2 TB' }
             ].map((item, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px' }}>
