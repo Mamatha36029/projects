@@ -101,11 +101,26 @@ app.get('/api/admin/stats', async (req, res) => {
       stats.farmersLoggedIn = totalFarmers.length;
       stats.totalFarmers = totalFarmers.length;
       stats.diseasesDetected = totalScans;
-      // Calculate pesticides booked (using a random number for demo if no specific logs exist, or counting booking actions)
+      
+      // Calculate pesticides booked (baseline 156 + real-time bookings)
       const totalBookings = await db.collection('activity_logs').countDocuments({
         action: 'SERVICE_BOOKED'
       });
-      stats.pesticidesBooked = totalBookings > 0 ? totalBookings : 156; // Fallback demo number
+      stats.pesticidesBooked = 156 + totalBookings;
+
+      // Calculate total sales in real-time (baseline ₹24,500 + purchase totals)
+      const purchases = await db.collection('activity_logs').find({
+        action: 'PRODUCT_PURCHASE'
+      }).toArray();
+      
+      let liveSales = 0;
+      purchases.forEach(p => {
+        const match = p.details?.match(/₹([\d.]+)/);
+        if (match && match[1]) {
+          liveSales += parseFloat(match[1]);
+        }
+      });
+      stats.totalSales = 24500 + liveSales;
     }
     
     // Fetch recent activity logs
