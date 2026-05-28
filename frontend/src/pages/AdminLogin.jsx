@@ -10,37 +10,51 @@ const AdminLogin = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    if (username.trim().toLowerCase() === 'vishwa' && password.trim() === 'vishwa123') {
-      // Store admin flag
-      localStorage.setItem('isAdmin', 'true');
-
+    try {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/admin/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+      if (!res.ok) {
+        const err = await res.json();
+        alert(err.message || 'Invalid admin credentials');
+        return;
+      }
+      const data = await res.json();
+      // Expect a token field from backend
+      if (data.token) {
+        localStorage.setItem('adminToken', data.token);
+        localStorage.setItem('isAdmin', 'true'); // keep legacy flag for other components
+      }
+      // Log activity
       try {
-        await fetch('/api/activity', {
+        await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/activity`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             action: 'ADMIN_LOGIN',
-            user: { name: 'Vishwa (Admin)' },
+            user: { name: username },
             details: 'Admin logged into the control panel'
           })
         });
-      } catch (err) {
-        console.error('Logging failed', err);
+      } catch (logErr) {
+        console.error('Logging activity failed', logErr);
       }
-
-      // After successful login, preload admin stats so the dashboard shows data immediately
+      // Pre‑load admin stats for immediate dashboard rendering
       try {
-        const statsRes = await fetch('/api/admin/stats');
+        const statsRes = await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/admin/stats`);
         if (statsRes.ok) {
           const statsData = await statsRes.json();
           localStorage.setItem('adminStats', JSON.stringify(statsData));
         }
-      } catch (e) {
-        console.error('Failed to preload admin stats', e);
+      } catch (statsErr) {
+        console.error('Failed to preload admin stats', statsErr);
       }
       navigate('/admin');
-    } else {
-      alert('Invalid admin credentials');
+    } catch (networkErr) {
+      console.error('Login request failed', networkErr);
+      alert('Unable to reach server. Please try again later.');
     }
   };
 
@@ -50,7 +64,14 @@ const AdminLogin = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="glass"
-        style={{ padding: '48px', width: '100%', maxWidth: '400px', borderRadius: '16px' }}
+        style={{
+          padding: '48px',
+          width: '100%',
+          maxWidth: '400px',
+          borderRadius: '16px',
+          backdropFilter: 'blur(12px)',
+          background: 'rgba(255,255,255,0.08)'
+        }}
       >
         <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Admin Login</h2>
         <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>

@@ -28,7 +28,7 @@ const AdminDashboard = () => {
       return;
     }
 
-    fetch('/api/admin/stats')
+    fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/admin/stats`)
       .then(res => res.json())
       .then(data => {
         setStats(data);
