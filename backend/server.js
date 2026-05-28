@@ -103,10 +103,10 @@ app.get('/api/admin/stats', async (req, res) => {
       stats.diseasesDetected = totalScans;
       
       // Calculate pesticides booked (baseline 156 + real-time bookings)
-      const totalBookings = await db.collection('activity_logs').countDocuments({
-        action: 'SERVICE_BOOKED'
+      const totalPurchases = await db.collection('activity_logs').countDocuments({
+        action: 'PRODUCT_PURCHASE'
       });
-      stats.pesticidesBooked = 156 + totalBookings;
+      stats.pesticidesBooked = totalPurchases;
 
       // Calculate total sales in real-time (baseline ₹24,500 + purchase totals)
       const purchases = await db.collection('activity_logs').find({

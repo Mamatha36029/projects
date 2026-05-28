@@ -12,7 +12,7 @@ const AdminDashboard = () => {
     systemStatus: { uptime: 99.9, health: 100, load: 65 },
     recentStock: [],
     recentPurchases: [],
-    recentActivity: []
+    pesticidesBooked: 0,
   };
 
   const navigate = useNavigate();
@@ -22,23 +22,20 @@ const AdminDashboard = () => {
   const [loading, setLoading] = React.useState(!savedStats);
 
 
-  useEffect(() => {
-    if (localStorage.getItem('isAdmin') !== 'true') {
-      navigate('/admin-login');
-      return;
-    }
+  // Poll admin stats every 15 seconds for real‑time updates
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/admin/stats`)
+        .then(res => res.json())
+        .then(data => {
+          setStats(data);
+          setLoading(false);
+        })
+        .catch(err => console.error('Failed to poll admin stats', err));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
-    fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/admin/stats`)
-      .then(res => res.json())
-      .then(data => {
-        setStats(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error('Failed to fetch stats', err);
-        setLoading(false);
-      });
-  }, [navigate]);
 
   if (loading && !stats) {
     return (
@@ -146,7 +143,7 @@ const AdminDashboard = () => {
         </div>
         <div className="glass" style={{ padding: '24px' }}>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '16px' }}>Pesticides Booked</h3>
-          <p style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent)' }}>{stats.pesticidesBooked?.toLocaleString() || 156}</p>
+          <p style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent)' }}>{stats.pesticidesBooked?.toLocaleString() || 0}</p>
         </div>
       </div>
 
