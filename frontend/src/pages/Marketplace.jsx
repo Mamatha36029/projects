@@ -508,7 +508,7 @@ const Marketplace = () => {
                           </div>
                         </div>
                         
-                        <div style={{ position: 'relative', width: '280px', minHeight: '350px', margin: '0 auto', background: 'white', padding: '12px', borderRadius: '24px', overflow: 'hidden' }}>
+                        <div style={{ position: 'relative', width: '280px', height: '380px', margin: '0 auto', background: 'white', padding: '12px', borderRadius: '24px', overflow: 'hidden' }}>
                           <img src="/upi_qr.png" alt="Razorpay UPI QR" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                           {/* Animated Scan Line */}
                           <motion.div 
