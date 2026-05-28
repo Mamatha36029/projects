@@ -72,8 +72,8 @@ const Marketplace = () => {
     const fetchData = async () => {
       try {
         const [pestsRes, datasetsRes] = await Promise.all([
-          fetch('/api/pesticides'),
-          fetch('/api/datasets')
+          fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/pesticides`),
+          fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/datasets`)
         ]);
         const pestsData = await pestsRes.json();
         const datasetsData = await datasetsRes.json();
@@ -83,8 +83,8 @@ const Marketplace = () => {
         setDatasets(datasetsData);
       } catch (error) {
         console.error('Error fetching data for marketplace:', error);
-        setProducts([]);
-        setDatasets([]);
+        // Keep existing sample data if backend fetch fails
+        // No need to clear products or datasets
       } finally {
         setLoading(false);
       }
@@ -94,10 +94,13 @@ const Marketplace = () => {
   }, []);
 
   const currentList = activeTab === 'pesticides' ? products : datasets;
-  const filteredProducts = currentList.filter(p => 
-    (p.name?.toLowerCase() || '').includes(searchTerm.toLowerCase()) || 
-    (p.target?.toLowerCase() || '').includes(searchTerm.toLowerCase())
-  );
+  const filteredProducts = currentList.filter(p => {
+    const name = (p.name?.toLowerCase() || '');
+    const target = (p.target?.toLowerCase() || '');
+    const isDataset = activeTab === 'datasets';
+    const exclude = isDataset && (name.includes('pathology dataset') || name.includes('tropical map') || name.includes('tropical crop disease'));
+    return !exclude && (name.includes(searchTerm.toLowerCase()) || target.includes(searchTerm.toLowerCase()));
+  });
 
   const addToCart = (product) => {
     setCart(prev => {

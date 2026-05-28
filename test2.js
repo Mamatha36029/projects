@@ -1,0 +1,1 @@
+fetch('http://localhost:5000/api/activity', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({action: 'test'}) }).then(async r => console.log(r.status, await r.text()))

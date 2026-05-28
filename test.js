@@ -1,0 +1,1 @@
+fetch('http://localhost:5000/api/admin/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({username: 'vishwa', password: 'vishwa1234'}) }).then(async r => console.log(r.status, await r.text()))

@@ -17,7 +17,7 @@ const Login = () => {
       localStorage.setItem('user', JSON.stringify(user));
       
       try {
-        await fetch('/api/activity', {
+        await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/activity`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

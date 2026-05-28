@@ -74,7 +74,7 @@ const Home = () => {
           
 
 
-          const response = await fetch('/api/analyze', {
+          const response = await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/analyze`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

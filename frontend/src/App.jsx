@@ -12,6 +12,14 @@ import AdminLogin from './pages/AdminLogin';
 import Encyclopedia from './pages/Encyclopedia';
 import AboutUs from './pages/AboutUs';
 
+const AdminRoute = () => {
+  return localStorage.getItem('isAdmin') === 'true' ? (
+    <AdminDashboard />
+  ) : (
+    <Navigate to="/admin-login" replace />
+  );
+};
+
 function App() {
   const [user, setUser] = React.useState(null);
 
@@ -73,7 +81,7 @@ function App() {
           <Route path="/marketplace" element={user ? <Marketplace /> : <Login />} />
           <Route path="/encyclopedia" element={user ? <Encyclopedia /> : <Login />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/admin" element={localStorage.getItem('isAdmin') === 'true' ? <AdminDashboard /> : <Navigate to="/admin-login" replace />} />
+          <Route path="/admin" element={<AdminRoute />} />
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/marketing" element={user ? <MarketingDashboard /> : <Login />} />
           <Route path="/about" element={user ? <AboutUs /> : <Login />} />

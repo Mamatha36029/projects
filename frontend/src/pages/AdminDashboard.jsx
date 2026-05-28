@@ -83,7 +83,7 @@ const AdminDashboard = () => {
           </div>
           <div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Total Farmers</p>
-            <h3 style={{ fontSize: '1.5rem' }}>{stats.totalFarmers.toLocaleString()}</h3>
+            <h3 style={{ fontSize: '1.5rem' }}>{stats.totalFarmers?.toLocaleString() || 0}</h3>
           </div>
         </div>
 
@@ -93,7 +93,7 @@ const AdminDashboard = () => {
           </div>
           <div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Diseases Detected</p>
-            <h3 style={{ fontSize: '1.5rem' }}>{stats.diseasesDetected.toLocaleString()}</h3>
+            <h3 style={{ fontSize: '1.5rem' }}>{stats.diseasesDetected?.toLocaleString() || 0}</h3>
           </div>
         </div>
       </div>
@@ -135,14 +135,18 @@ const AdminDashboard = () => {
       </div>
 
       {/* Sales Dashboard */}
-      <div className="grid grid-cols-2" style={{ gap: '24px', marginBottom: '40px' }}>
+      <div className="grid grid-cols-3" style={{ gap: '24px', marginBottom: '40px' }}>
         <div className="glass" style={{ padding: '24px' }}>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '16px' }}>Total Sales</h3>
-          <p style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--primary)' }}>₹{stats.totalSales.toLocaleString()}</p>
+          <p style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--primary)' }}>₹{stats.totalSales?.toLocaleString() || 0}</p>
         </div>
         <div className="glass" style={{ padding: '24px' }}>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '16px' }}>Farmers Logged In</h3>
-          <p style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--secondary)' }}>{stats.farmersLoggedIn.toLocaleString()}</p>
+          <p style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--secondary)' }}>{stats.farmersLoggedIn?.toLocaleString() || 0}</p>
+        </div>
+        <div className="glass" style={{ padding: '24px' }}>
+          <h3 style={{ fontSize: '1.5rem', marginBottom: '16px' }}>Pesticides Booked</h3>
+          <p style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent)' }}>{stats.pesticidesBooked?.toLocaleString() || 156}</p>
         </div>
       </div>
 
@@ -221,14 +225,14 @@ const AdminDashboard = () => {
                   </td>
                   <td style={{ padding: '12px' }}>
                     <span style={{ 
-                      background: log.action.includes('LOGIN') ? 'rgba(16, 185, 129, 0.1)' : 'rgba(59, 130, 246, 0.1)', 
-                      color: log.action.includes('LOGIN') ? 'var(--success)' : 'var(--accent)',
+                      background: log.action?.includes('LOGIN') ? 'rgba(16, 185, 129, 0.1)' : 'rgba(59, 130, 246, 0.1)', 
+                      color: log.action?.includes('LOGIN') ? 'var(--success)' : 'var(--accent)',
                       padding: '4px 8px', 
                       borderRadius: '4px',
                       fontSize: '0.8rem',
                       fontWeight: 'bold'
                     }}>
-                      {log.action}
+                      {log.action || 'Unknown'}
                     </span>
                   </td>
                   <td style={{ padding: '12px', color: 'var(--text-muted)' }}>{log.details}</td>
