@@ -74,6 +74,9 @@ const Home = () => {
           
 
 
+          const storedUser = localStorage.getItem('user');
+          const userObj = storedUser ? JSON.parse(storedUser) : null;
+
           const response = await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/analyze`, {
             method: 'POST',
             headers: {
@@ -82,7 +85,8 @@ const Home = () => {
             body: JSON.stringify({ 
               image: base64Data,
               filename: file.name,
-              selectedCrop: selectedCrop
+              selectedCrop: selectedCrop,
+              user: userObj
             })
           });
 

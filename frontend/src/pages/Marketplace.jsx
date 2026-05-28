@@ -139,8 +139,25 @@ const Marketplace = () => {
   const cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
   const cartCount = cart.reduce((count, item) => count + item.quantity, 0);
 
-  const handleCheckoutSubmit = (e) => {
+  const handleCheckoutSubmit = async (e) => {
     e.preventDefault();
+    const storedUser = localStorage.getItem('user');
+    const userObj = storedUser ? JSON.parse(storedUser) : null;
+    
+    try {
+      await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/activity`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'PRODUCT_PURCHASE',
+          user: userObj || { name: 'Anonymous Farmer' },
+          details: `Farmer purchased ${cartCount} items worth ₹${cartTotal.toFixed(2)}`
+        })
+      });
+    } catch (err) {
+      console.error('Failed to log product purchase', err);
+    }
+
     alert("Order placed successfully! Check your SMS for details.");
     setCart([]);
     setIsCheckoutOpen(false);
@@ -565,7 +582,24 @@ const Marketplace = () => {
                   whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
                   className="btn btn-primary" 
                   style={{ width: '100%', padding: '16px', borderRadius: '12px', fontWeight: '700' }}
-                  onClick={() => {
+                  onClick={async () => {
+                    const storedUser = localStorage.getItem('user');
+                    const userObj = storedUser ? JSON.parse(storedUser) : null;
+                    
+                    try {
+                      await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/activity`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                          action: 'SERVICE_BOOKED',
+                          user: userObj || { name: 'Anonymous Farmer' },
+                          details: `Farmer booked service for ${selectedProductForBooking?.name} on ${bookingDate}`
+                        })
+                      });
+                    } catch (err) {
+                      console.error('Failed to log service booking', err);
+                    }
+
                     alert(`Booking confirmed for ${selectedProductForBooking?.name} on ${bookingDate}! Our expert will contact you shortly.`);
                     setIsBookingOpen(false);
                   }}

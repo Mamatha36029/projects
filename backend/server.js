@@ -20,46 +20,59 @@ const openai = new OpenAI({
 
 const { MongoClient } = require('mongodb');
 const mongoUri = process.env.MONGODB_URI;
-let db;
+let cachedDb = null;
+let cachedClient = null;
 
-if (mongoUri) {
-  MongoClient.connect(mongoUri, { serverSelectionTimeoutMS: 5000 })
-    .then(async client => {
-      console.log('Successfully connected to MongoDB!');
-      db = client.db('agrovision');
-      
-      // Seed Data if empty
-      const statsCollection = db.collection('admin_stats');
-      const count = await statsCollection.countDocuments();
-      if (count === 0) {
-        console.log('Seeding initial admin data...');
-        await statsCollection.insertOne({
-          totalFarmers: 0,
-          diseasesDetected: 0,
-          totalSales: 0,
-          farmersLoggedIn: 0,
-          systemStatus: {
-            uptime: 99.98,
-            health: 100,
-            load: 65
-          },
-          recentPurchases: [],
-          recentStock: [
-            { name: 'Chlorothalonil 720', added: '+150 units', details: 'Expires: 2025-12-31 | Batch: #AG-942' },
-            { name: 'Mancozeb Plus', added: '+200 units', details: 'Expires: 2025-06-30 | Batch: #BP-112' }
-          ]
-        });
-      }
-    })
-    .catch(err => {
-      console.error('MongoDB connection error:', err);
-    });
-} else {
-  console.log('No MONGODB_URI provided. Skipping DB connection.');
+async function connectToDatabase() {
+  if (cachedDb) {
+    return cachedDb;
+  }
+  if (!mongoUri) {
+    console.log('No MONGODB_URI provided. Skipping DB connection.');
+    return null;
+  }
+
+  try {
+    console.log('Connecting to MongoDB...');
+    const client = await MongoClient.connect(mongoUri, { serverSelectionTimeoutMS: 5000 });
+    const db = client.db('agrovision');
+    
+    // Seed Data if empty
+    const statsCollection = db.collection('admin_stats');
+    const count = await statsCollection.countDocuments();
+    if (count === 0) {
+      console.log('Seeding initial admin data...');
+      await statsCollection.insertOne({
+        totalFarmers: 0,
+        diseasesDetected: 0,
+        totalSales: 0,
+        farmersLoggedIn: 0,
+        systemStatus: {
+          uptime: 99.98,
+          health: 100,
+          load: 65
+        },
+        recentPurchases: [],
+        recentStock: [
+          { name: 'Chlorothalonil 720', added: '+150 units', details: 'Expires: 2025-12-31 | Batch: #AG-942' },
+          { name: 'Mancozeb Plus', added: '+200 units', details: 'Expires: 2025-06-30 | Batch: #BP-112' }
+        ]
+      });
+    }
+
+    console.log('Successfully connected to MongoDB!');
+    cachedClient = client;
+    cachedDb = db;
+    return db;
+  } catch (err) {
+    console.error('MongoDB connection error:', err);
+    return null;
+  }
 }
 
 // Admin Stats Endpoint
 app.get('/api/admin/stats', async (req, res) => {
+  const db = await connectToDatabase();
   if (!db) {
     // Return mock stats when database is unavailable (e.g., offline development)
     const mockStats = {
@@ -112,6 +125,7 @@ app.get('/api/admin/stats', async (req, res) => {
 
 // Activity Logging Endpoint
 app.post('/api/activity', async (req, res) => {
+  const db = await connectToDatabase();
   if (!db) {
     console.warn('DB not connected; skipping activity logging.');
     return res.json({ success: true, message: 'Activity logged (mock)' });
@@ -534,11 +548,21 @@ app.get('/api/datasets', (req, res) => {
 });
 
 app.post('/api/analyze', async (req, res) => {
+  const db = await connectToDatabase();
   try {
     const isDemoKey = !apiKey || apiKey.length < 30 || apiKey.startsWith('2b10');
     if (isDemoKey) {
       console.log(">>> SMART DEMO RESPONSE Triggered for:", req.body.selectedCrop, req.body.filename);
-      return res.json(getDynamicResponse(req.body.filename, req.body.selectedCrop));
+      const diagnosis = getDynamicResponse(req.body.filename, req.body.selectedCrop);
+      if (db) {
+        await db.collection('activity_logs').insertOne({
+          action: 'AI_DIAGNOSIS_DEMO',
+          user: req.body.user || { name: 'Anonymous Farmer' },
+          details: `Demo Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
+          timestamp: new Date()
+        });
+      }
+      return res.json(diagnosis);
     }
 
     const response = await openai.chat.completions.create({
