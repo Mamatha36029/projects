@@ -120,7 +120,7 @@ app.get('/api/admin/stats', async (req, res) => {
           liveSales += parseFloat(match[1]);
         }
       });
-      stats.totalSales = 24500 + liveSales;
+      stats.totalSales = liveSales;
     }
     
     // Fetch recent activity logs
