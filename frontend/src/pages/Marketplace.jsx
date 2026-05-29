@@ -68,6 +68,13 @@ const Marketplace = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedProductForBooking, setSelectedProductForBooking] = useState(null);
   const [bookingDate, setBookingDate] = useState('');
+  // Toast notification state
+  const [toast, setToast] = useState(null);
+
+  const showToast = (msg) => {
+    setToast(msg);
+    setTimeout(() => setToast(null), 3000);
+  };
 
   useEffect(() => {
     // Fetch products (pesticides) and datasets
@@ -160,7 +167,15 @@ const Marketplace = () => {
       console.error('Failed to log product purchase', err);
     }
 
-    alert("Order placed successfully! Check your SMS for details.");
+    showToast("Order placed successfully! Check your SMS for details.");
+    // Update admin stats in localStorage if present
+    const adminStatsStr = localStorage.getItem('adminStats');
+    if (adminStatsStr) {
+      const adminStats = JSON.parse(adminStatsStr);
+      adminStats.pesticidesBooked = (adminStats.pesticidesBooked || 0) + 1;
+      adminStats.totalSales = (adminStats.totalSales || 0) + cartTotal;
+      localStorage.setItem('adminStats', JSON.stringify(adminStats));
+    }
     setCart([]);
     setIsCheckoutOpen(false);
   };
@@ -640,8 +655,8 @@ const Marketplace = () => {
                         marginBottom: '20px'
                       }}
                     >
-                      <div style={{ position: 'relative', width: '220px', height: '300px', margin: '0 auto', background: 'white', padding: '12px', borderRadius: '16px', overflow: 'hidden' }}>
-                        <img src={upiQR} alt="Razorpay UPI QR" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                      <div style={{ position: 'relative', width: '280px', height: '380px', margin: '0 auto', background: '#0a0a0a', padding: '12px', borderRadius: '16px', overflow: 'hidden' }}>
+                        <img src={upiQR} alt="PhonePe UPI QR" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                       </div>
                       <p style={{ marginTop: '16px', color: 'var(--primary)', fontSize: '0.85rem', fontWeight: 'bold' }}>Awaiting secure verification...</p>
                     </motion.div>

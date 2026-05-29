@@ -13,6 +13,7 @@ const AdminDashboard = () => {
     recentStock: [],
     recentPurchases: [],
     pesticidesBooked: 0,
+    farmersBooked: 0,
   };
 
   const navigate = useNavigate();
