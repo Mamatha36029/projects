@@ -247,7 +247,20 @@ const PNLogin = () => {
               {isAdmin ? 'Admin Login' : isSignup ? 'Create Account' : 'Sign In'}
               <ArrowRight size={22} style={{ marginLeft: '12px' }} />
             </motion.button>
-          </form>
+            {/* Register link for new users */}
+            {!isAdmin && !isSignup && (
+              <div style={{ marginTop: '12px', textAlign: 'center' }}>
+                <button
+                  type="button"
+                  onClick={() => setIsSignup(true)}
+                  className="btn btn-link"
+                  style={{ background: 'transparent', color: 'var(--primary)', border: 'none', cursor: 'pointer' }}
+                >
+                  Register Account
+                </button>
+              </div>
+            )}
+            </form>
         </motion.div>
       </div>
     </div>
