@@ -5,14 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [
     react(),
-    {
-      name: 'force-close-build',
-      apply: 'build',
-      closeBundle() {
-        console.log('Build finished, forcing exit...');
-        setTimeout(() => process.exit(0), 0);
-      },
-    },
+    // force-close-build plugin removed – Vite can now emit the dist folder
   ],
 
   server: {
