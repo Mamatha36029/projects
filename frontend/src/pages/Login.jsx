@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Phone, LogIn, Tractor, Wheat, Leaf, Lock, ArrowRight, Zap, ShoppingBag, ShieldCheck } from 'lucide-react';
+import zxcvbn from 'zxcvbn'; // password strength library
 import { motion } from 'framer-motion';
 import loginBg from '../assets/login_hero.jpg';
 
@@ -8,31 +9,53 @@ const Login = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [isSignup, setIsSignup] = useState(false);
   const navigate = useNavigate();
-
   const handleLogin = async (e) => {
     e.preventDefault();
-    if (name && phone.length >= 10 && password) {
+
+    // Ensure password contains both uppercase and lowercase letters
+    const hasUpper = /[A-Z]/.test(password);
+    const hasLower = /[a-z]/.test(password);
+    if (!hasUpper || !hasLower) {
+      alert('Password must contain both uppercase and lowercase letters');
+      return;
+    }
+
+    // Admin login handling with fixed password
+    if (isAdmin) {
+      const ADMIN_PASS = 'AdminPass123';
+      if (password !== ADMIN_PASS) {
+        alert('Invalid admin password');
+        return;
+      }
+      const adminUser = { name, phone, isAdmin: true };
+      localStorage.setItem('admin', JSON.stringify(adminUser));
+      window.location.href = '/admin/dashboard';
+      return;
+    }
+
+    // Normal user (or signup) flow
+    if ((isSignup ? name : true) && phone.length >= 10 && password) {
       const user = { name, phone, password };
       localStorage.setItem('user', JSON.stringify(user));
-      
       try {
         await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/activity`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            action: 'USER_LOGIN',
+            action: isSignup ? 'USER_SIGNUP' : 'USER_LOGIN',
             user: { name, phone },
-            details: 'Farmer logged into the portal'
+            details: isSignup ? 'New user signed up' : 'User logged in'
           })
         });
       } catch (err) {
         console.error('Logging failed', err);
       }
-
       window.location.href = '/';
     } else {
-      alert("Please enter valid credentials.");
+      alert('Please enter valid credentials.');
     }
   };
 
@@ -113,22 +136,61 @@ const Login = () => {
           </div>
 
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            <div className="input-group">
-              <label>Full Name</label>
-              <div style={{ position: 'relative' }}>
-                <User size={20} style={{ position: 'absolute', left: '16px', top: '16px', color: 'var(--text-muted)' }} />
-                <input 
-                  type="text" 
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Rahul Sharma"
-                  className="input-field"
-                  style={{ paddingLeft: '52px', width: '100%' }}
-                  required
-                />
-              </div>
+            {/* Admin / User toggle */}
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
+              <button
+                type="button"
+                onClick={() => setIsAdmin(!isAdmin)}
+                className="btn"
+                style={{
+                  background: isAdmin ? 'var(--primary)' : 'transparent',
+                  color: isAdmin ? 'white' : 'var(--text-muted)',
+                  border: '1px solid var(--primary)',
+                  borderRadius: '8px',
+                  padding: '8px 16px',
+                  cursor: 'pointer',
+                  marginRight: '8px'
+                }}
+              >
+                {isAdmin ? 'Admin Mode' : 'User Mode'}
+              </button>
+              <button
+                type="button"
+                onClick={() => setIsSignup(!isSignup)}
+                className="btn"
+                style={{
+                  background: isSignup ? 'var(--primary)' : 'transparent',
+                  color: isSignup ? 'white' : 'var(--text-muted)',
+                  border: '1px solid var(--primary)',
+                  borderRadius: '8px',
+                  padding: '8px 16px',
+                  cursor: 'pointer'
+                }}
+              >
+                {isSignup ? 'Switch to Sign In' : 'Switch to Sign Up'}
+              </button>
             </div>
 
+            {/* Full Name (only for sign‑up) */}
+            {isSignup && (
+              <div className="input-group">
+                <label>Full Name</label>
+                <div style={{ position: 'relative' }}>
+                  <User size={20} style={{ position: 'absolute', left: '16px', top: '16px', color: 'var(--text-muted)' }} />
+                  <input 
+                    type="text" 
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Rahul Sharma"
+                    className="input-field"
+                    style={{ paddingLeft: '52px', width: '100%' }}
+                    required
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Phone Number */}
             <div className="input-group">
               <label>Phone Number</label>
               <div style={{ position: 'relative' }}>
@@ -145,8 +207,9 @@ const Login = () => {
               </div>
             </div>
 
+            {/* Password */}
             <div className="input-group">
-              <label>Secure Password</label>
+              <label>{isAdmin ? 'Admin Password' : (isSignup ? 'Create Password' : 'Secure Password')}</label>
               <div style={{ position: 'relative' }}>
                 <Lock size={20} style={{ position: 'absolute', left: '16px', top: '16px', color: 'var(--text-muted)' }} />
                 <input 
@@ -161,6 +224,13 @@ const Login = () => {
               </div>
             </div>
 
+            {/* Password strength meter (hidden for admin) */}
+            {!isAdmin && password && (
+              <div style={{ marginTop: '8px' }}>
+                <PasswordStrengthBar password={password} />
+              </div>
+            )}
+
             <motion.button 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -172,6 +242,20 @@ const Login = () => {
             </motion.button>
           </form>
 
+            {/* PasswordStrengthBar component definition */}
+            {(() => {
+              const PasswordStrengthBar = ({ password }) => {
+                const result = zxcvbn(password);
+                const score = result.score; // 0-4
+                const colors = ['#e53e3e', '#dd6b20', '#d69e2e', '#38a169', '#2b6cb0'];
+                return (
+                  <div style={{ width: '100%', height: '8px', background: '#2d3748', borderRadius: '4px' }}>
+                    <div style={{ width: `${(score + 1) * 20}%`, height: '100%', background: colors[score], borderRadius: '4px' }} />
+                  </div>
+                );
+              };
+              return null;
+            })()}
         </motion.div>
       </div>
     </div>

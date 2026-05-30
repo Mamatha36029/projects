@@ -14,6 +14,7 @@ const AdminDashboard = () => {
     recentPurchases: [],
     pesticidesBooked: 0,
     farmersBooked: 0,
+    farmerBookings: {}, // map of farmer name -> booking count
   };
 
   const navigate = useNavigate();
@@ -153,6 +154,21 @@ const AdminDashboard = () => {
         <h3 style={{ fontSize: '1.5rem', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
           <Store color="var(--accent)" /> Recent Stock Additions
         </h3>
+      </div>
+      {/* Farmers Booking List */}
+      <div className="glass" style={{ padding: '24px', marginBottom: '40px' }}>
+        <h3 style={{ fontSize: '1.5rem', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <Users color="var(--primary)" /> Farmers Service Bookings
+        </h3>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          {(Object.entries(stats.farmerBookings || {})).map(([name, count]) => (
+            <li key={name} style={{ padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', justifyContent: 'space-between' }}>
+              <span>{name}</span>
+              <span>{count}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
         <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
           {(stats.recentStock || []).map((item, idx) => (
             <li key={idx} style={{ padding: '12px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', borderLeft: '4px solid var(--primary)' }}>
