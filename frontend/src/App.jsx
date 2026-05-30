@@ -76,7 +76,7 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={user ? <Home /> : <Login />} />
+          <Route path="/" element={<Home />} />
           <Route path="/results" element={user ? <Results /> : <Login />} />
           <Route path="/marketplace" element={user ? <Marketplace /> : <Login />} />
           <Route path="/encyclopedia" element={user ? <Encyclopedia /> : <Login />} />
