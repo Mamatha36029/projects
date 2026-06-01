@@ -146,14 +146,14 @@ const Login = () => {
 
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             {/* Admin / User toggle */}
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '8px' }}>
               <button
                 type="button"
-                onClick={() => setIsAdmin(!isAdmin)}
+                onClick={() => { setIsAdmin(false); }}
                 className="btn"
                 style={{
-                  background: isAdmin ? 'var(--primary)' : 'transparent',
-                  color: isAdmin ? 'white' : 'var(--text-muted)',
+                  background: !isAdmin ? 'var(--primary)' : 'transparent',
+                  color: !isAdmin ? 'white' : 'var(--text-muted)',
                   border: '1px solid var(--primary)',
                   borderRadius: '8px',
                   padding: '8px 16px',
@@ -161,24 +161,47 @@ const Login = () => {
                   marginRight: '8px'
                 }}
               >
-                {isAdmin ? 'Admin Mode' : 'User Mode'}
+                Farmer Login
               </button>
               <button
                 type="button"
-                onClick={() => setIsSignup(!isSignup)}
+                onClick={() => { setIsAdmin(true); setIsSignup(false); }}
                 className="btn"
                 style={{
-                  background: isSignup ? 'var(--primary)' : 'transparent',
-                  color: isSignup ? 'white' : 'var(--text-muted)',
+                  background: isAdmin ? 'var(--primary)' : 'transparent',
+                  color: isAdmin ? 'white' : 'var(--text-muted)',
                   border: '1px solid var(--primary)',
                   borderRadius: '8px',
                   padding: '8px 16px',
                   cursor: 'pointer'
                 }}
               >
-                {isSignup ? 'Switch to Sign In' : 'Switch to Sign Up'}
+                Admin Login
               </button>
             </div>
+
+            {/* Farmer Sign Up Toggle */}
+            {!isAdmin && (
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '8px' }}>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginRight: '8px' }}>
+                  {isSignup ? "Already have an account?" : "New to Farmer Portal?"}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setIsSignup(!isSignup)}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: 'var(--primary)',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    textDecoration: 'underline'
+                  }}
+                >
+                  {isSignup ? 'Sign In Here' : 'Register Here'}
+                </button>
+              </div>
+            )}
 
             {/* Full Name (only for sign‑up) */}
             {isSignup && (
