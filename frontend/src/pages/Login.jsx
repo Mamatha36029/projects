@@ -250,5 +250,7 @@ const Login = () => {
               Sign In to Portal <ArrowRight size={22} style={{ marginLeft: '12px' }} />
             </motion.button>
           </form>
+          </motion.div>
+        </div>
 
 export default Login;
