@@ -252,5 +252,8 @@ const Login = () => {
           </form>
           </motion.div>
         </div>
+      </div>
+    );
+};
 
 export default Login;
