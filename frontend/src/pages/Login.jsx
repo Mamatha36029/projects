@@ -42,7 +42,8 @@ const Login = () => {
       }
       const adminUser = { name, phone, isAdmin: true };
       localStorage.setItem('admin', JSON.stringify(adminUser));
-      window.location.href = '/admin/dashboard';
+      localStorage.setItem('isAdmin', 'true');
+      window.location.href = '/admin';
       return;
     }
 

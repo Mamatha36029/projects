@@ -1,5 +1,7 @@
 import React from 'react';
-import zxcvbn from 'zxcvbn';
+import * as zxcvbnModule from 'zxcvbn';
+
+const zxcvbn = typeof zxcvbnModule === 'function' ? zxcvbnModule : (zxcvbnModule && zxcvbnModule.default);
 
 /**
  * PasswordStrengthBar – visual indicator of password strength.
@@ -7,8 +9,19 @@ import zxcvbn from 'zxcvbn';
  * Colors: red → orange → yellow → green → blue (strongest).
  */
 const PasswordStrengthBar = ({ password }) => {
-  const result = zxcvbn(password);
-  const score = result.score; // 0‑4
+  let score = 0;
+  try {
+    if (zxcvbn) {
+      const result = zxcvbn(password);
+      score = result.score; // 0-4
+    } else {
+      score = Math.min(4, Math.floor((password?.length || 0) / 3));
+    }
+  } catch (err) {
+    console.error('zxcvbn evaluation error:', err);
+    score = Math.min(4, Math.floor((password?.length || 0) / 3));
+  }
+  
   const colors = ['#e53e3e', '#dd6b20', '#d69e2e', '#38a169', '#2b6cb0'];
 
   return (
@@ -19,6 +32,7 @@ const PasswordStrengthBar = ({ password }) => {
           height: '100%',
           background: colors[score],
           borderRadius: '4px',
+          transition: 'all 0.3s ease'
         }}
       />
     </div>
