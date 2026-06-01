@@ -59,7 +59,7 @@ function App() {
               </div>
             </Link>
             <div className="nav-links" style={{ gap: '32px' }}>
-              <Link to="/" className="nav-link">Scanner</Link>
+              <Link to="/home" className="nav-link">Scanner</Link>
               <Link to="/encyclopedia" className="nav-link">Encyclopedia</Link>
               <Link to="/marketplace" className="nav-link">Marketplace</Link>
               <Link to="/marketing" className="nav-link">Insights</Link>
@@ -76,11 +76,12 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/results" element={user ? <Results /> : <Login />} />
           <Route path="/marketplace" element={user ? <Marketplace /> : <Login />} />
           <Route path="/encyclopedia" element={user ? <Encyclopedia /> : <Login />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/admin" element={<AdminRoute />} />
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/marketing" element={user ? <MarketingDashboard /> : <Login />} />

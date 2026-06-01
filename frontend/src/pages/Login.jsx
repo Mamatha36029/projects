@@ -15,13 +15,22 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    // Ensure password contains both uppercase and lowercase letters
-    const hasUpper = /[A-Z]/.test(password);
-    const hasLower = /[a-z]/.test(password);
-    if (!hasUpper || !hasLower) {
-      alert('Password must contain both uppercase and lowercase letters');
-      return;
-    }
+      // Robust password validation – uppercase, lowercase, number, special char, min length
+      const hasUpper = /[A-Z]/.test(password);
+      const hasLower = /[a-z]/.test(password);
+      const hasNumber = /[0-9]/.test(password);
+      const hasSpecial = /[!@#$%^&*(),.?\"{}|<>]/.test(password);
+      const isLongEnough = password.length >= 8;
+      if (!hasUpper || !hasLower || !hasNumber || !hasSpecial || !isLongEnough) {
+        let msg = 'Password must include:';
+        if (!hasUpper) msg += '\n- an uppercase letter';
+        if (!hasLower) msg += '\n- a lowercase letter';
+        if (!hasNumber) msg += '\n- a number';
+        if (!hasSpecial) msg += '\n- a special character';
+        if (!isLongEnough) msg += '\n- at least 8 characters';
+        alert(msg);
+        return;
+      }
 
     // Admin login handling with fixed password
     if (isAdmin) {
@@ -53,7 +62,7 @@ const Login = () => {
       } catch (err) {
         console.error('Logging failed', err);
       }
-      window.location.href = '/';
+      window.location.href = '/home';
     } else {
       alert('Please enter valid credentials.');
     }
@@ -241,25 +250,5 @@ const Login = () => {
               Sign In to Portal <ArrowRight size={22} style={{ marginLeft: '12px' }} />
             </motion.button>
           </form>
-
-            {/* PasswordStrengthBar component definition */}
-            {(() => {
-              const PasswordStrengthBar = ({ password }) => {
-                const result = zxcvbn(password);
-                const score = result.score; // 0-4
-                const colors = ['#e53e3e', '#dd6b20', '#d69e2e', '#38a169', '#2b6cb0'];
-                return (
-                  <div style={{ width: '100%', height: '8px', background: '#2d3748', borderRadius: '4px' }}>
-                    <div style={{ width: `${(score + 1) * 20}%`, height: '100%', background: colors[score], borderRadius: '4px' }} />
-                  </div>
-                );
-              };
-              return null;
-            })()}
-        </motion.div>
-      </div>
-    </div>
-  );
-};
 
 export default Login;
