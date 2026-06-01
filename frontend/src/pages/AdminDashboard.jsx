@@ -154,7 +154,19 @@ const AdminDashboard = () => {
         <h3 style={{ fontSize: '1.5rem', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
           <Store color="var(--accent)" /> Recent Stock Additions
         </h3>
+        <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          {(stats.recentStock || []).map((item, idx) => (
+            <li key={idx} style={{ padding: '12px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', borderLeft: '4px solid var(--primary)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <strong>{item.name}</strong>
+                <span style={{ color: 'var(--success)' }}>{item.added}</span>
+              </div>
+              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{item.details}</span>
+            </li>
+          ))}
+        </ul>
       </div>
+
       {/* Farmers Booking List */}
       <div className="glass" style={{ padding: '24px', marginBottom: '40px' }}>
         <h3 style={{ fontSize: '1.5rem', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -165,18 +177,6 @@ const AdminDashboard = () => {
             <li key={name} style={{ padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', justifyContent: 'space-between' }}>
               <span>{name}</span>
               <span>{count}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-        <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          {(stats.recentStock || []).map((item, idx) => (
-            <li key={idx} style={{ padding: '12px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', borderLeft: '4px solid var(--primary)' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <strong>{item.name}</strong>
-                <span style={{ color: 'var(--success)' }}>{item.added}</span>
-              </div>
-              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{item.details}</span>
             </li>
           ))}
         </ul>
