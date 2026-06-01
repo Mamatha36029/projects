@@ -250,14 +250,24 @@ const PNLogin = () => {
             {/* Register link for new users */}
             {!isAdmin && !isSignup && (
               <div style={{ marginTop: '12px', textAlign: 'center' }}>
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   type="button"
                   onClick={() => setIsSignup(true)}
-                  className="btn btn-link"
-                  style={{ background: 'transparent', color: 'var(--primary)', border: 'none', cursor: 'pointer' }}
+                  className="btn btn-primary"
+                  style={{
+                    padding: '12px 24px',
+                    fontSize: '1rem',
+                    borderRadius: '8px',
+                    fontWeight: '600',
+                    background: 'var(--primary)',
+                    color: 'white',
+                    border: 'none',
+                  }}
                 >
-                  Register Account
-                </button>
+                  Register New Account
+                </motion.button>
               </div>
             )}
             </form>
