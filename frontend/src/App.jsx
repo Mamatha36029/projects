@@ -62,6 +62,8 @@ function App() {
               <Link to="/home" className="nav-link">Scanner</Link>
               <Link to="/encyclopedia" className="nav-link">Encyclopedia</Link>
               <Link to="/marketplace" className="nav-link">Marketplace</Link>
+              <Link to="/marketplace" className="nav-link">Cart</Link>
+              <Link to="/marketplace" className="nav-link">Booked Items</Link>
               <Link to="/marketing" className="nav-link">Insights</Link>
               <Link to="/about" className="nav-link">About Us</Link>
               <Link to="/admin-login" className="nav-link">Admin Login</Link>
