@@ -34,9 +34,10 @@ const Login = () => {
 
     // Admin login handling with fixed password
     if (isAdmin) {
-      const ADMIN_PASS = 'AdminPass123';
-      if (password !== ADMIN_PASS) {
-        alert('Invalid admin password');
+      const ADMIN_PHONE = '9353475361';
+      const ADMIN_PASS = 'Vishwa@1234';
+      if (phone !== ADMIN_PHONE || password !== ADMIN_PASS) {
+        alert('Invalid admin credentials');
         return;
       }
       const adminUser = { name, phone, isAdmin: true };

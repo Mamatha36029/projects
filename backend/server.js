@@ -165,7 +165,7 @@ app.post('/api/activity', async (req, res) => {
 app.post('/api/admin/login', async (req, res) => {
   const { username, password } = req.body;
   // Simple hardcoded credentials for demo (replace with real auth)
-  if (username === 'vishwa' && password === 'vishwa1234') {
+  if (username === '9353475361' && password === 'Vishwa@1234') {
     // Issue a dummy token
     res.json({ token: 'admin-token' });
   } else {

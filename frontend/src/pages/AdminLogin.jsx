@@ -79,7 +79,7 @@ const AdminLogin = () => {
             <User size={20} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
             <input
               type="text"
-              placeholder="Username"
+              placeholder="Phone Number (Admin ID)"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               style={{ width: '100%', padding: '12px 12px 12px 40px', borderRadius: '8px', border: '1px solid var(--glass-border)', background: 'rgba(255,255,255,0.05)', color: 'white' }}
