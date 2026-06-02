@@ -502,7 +502,7 @@ const Marketplace = () => {
                         </div>
                         
                         <div style={{ position: 'relative', width: '280px', height: '380px', margin: '0 auto', background: 'white', padding: '12px', borderRadius: '24px', overflow: 'hidden' }}>
-                          <img src={vercelQR} alt="Vercel Marketplace QR" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                          <img src={scannerImg} alt="Scan & Pay Scanner" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                           {/* Animated Scan Line */}
                           <motion.div 
                             animate={{ top: ['0%', '100%', '0%'] }}
@@ -632,7 +632,7 @@ const Marketplace = () => {
                       }}
                     >
                       <div style={{ position: 'relative', width: '280px', height: '380px', margin: '0 auto', background: '#0a0a0a', padding: '12px', borderRadius: '16px', overflow: 'hidden' }}>
-                        <img src={vercelQR} alt="Vercel Marketplace QR" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                        <img src={scannerImg} alt="Scan & Pay Scanner" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                       </div>
                       <p style={{ marginTop: '16px', color: 'var(--primary)', fontSize: '0.85rem', fontWeight: 'bold' }}>Awaiting secure verification...</p>
                     </motion.div>
