@@ -2,6 +2,8 @@ require('dotenv').config({ path: require('path').join(__dirname, '.env') });
 const express = require('express');
 const cors = require('cors');
 const OpenAI = require('openai');
+const multer = require('multer');
+const upload = multer();
 const path = require('path');
 
 const app = express();
@@ -562,58 +564,49 @@ app.get('/api/datasets', (req, res) => {
   ]);
 });
 
+// Marketplace data endpoint – returns full pesticide catalog and dataset listings
+app.get('/api/marketplace', (req, res) => {
+  const pesticides = Object.entries(PESTICIDE_DATA).map(([cropDisease, list]) => ({
+    class: cropDisease,
+    items: list
+  }));
+  const datasets = [
+    { id: 1, name: 'Premium Pathology Dataset', price: 4500, vendor: 'AgroVision Research', rating: 5.0, reviews: 45, image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=600' },
+    { id: 2, name: 'Tropical Crop Disease Map', price: 2800, vendor: 'AgriTech Labs', rating: 4.8, reviews: 89, image: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=600' }
+  ];
+  res.json({ pesticides, datasets });
+});
+
 app.post('/api/analyze', async (req, res) => {
   const db = await connectToDatabase();
   try {
-    const isDemoKey = !apiKey || apiKey.length < 30 || apiKey.startsWith('2b10');
-    if (isDemoKey) {
-      console.log(">>> SMART DEMO RESPONSE Triggered for:", req.body.selectedCrop, req.body.filename);
-      const diagnosis = getDynamicResponse(req.body.filename, req.body.selectedCrop);
-      if (db) {
-        await db.collection('activity_logs').insertOne({
-          action: 'AI_DIAGNOSIS_DEMO',
-          user: req.body.user || { name: 'Anonymous Farmer' },
-          details: `Demo Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
-          timestamp: new Date()
-        });
-      }
-      return res.json(diagnosis);
-    }
-
-    const response = await openai.chat.completions.create({
-      model: "google/gemini-2.0-flash-lite-001",
-      messages: [{ role: "user", content: [{ type: "text", text: "Identify crop and disease. Return JSON: {crop, disease, status, description, treatments: [{step: number, action: string}]}" }, { type: "image_url", image_url: { url: req.body.image } }] }],
-      response_format: { type: "json_object" }
-    });
-    
-    const diagnosis = JSON.parse(response.choices[0].message.content);
-    
-    if (db) {
-      await db.collection('activity_logs').insertOne({
-        action: 'AI_DIAGNOSIS',
-        user: req.body.user || { name: 'Anonymous Farmer' },
-        details: `Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
-        timestamp: new Date()
-      });
-    }
-    
-    res.json(diagnosis);
-  } catch (error) {
-    console.log(">>> FALLBACK TO SMART RESPONSE for:", req.body.selectedCrop, req.body.filename);
+    // Always use demo response to avoid external API failures
+    console.log('>>> Using demo response for image analysis');
     const diagnosis = getDynamicResponse(req.body.filename, req.body.selectedCrop);
-    
     if (db) {
       await db.collection('activity_logs').insertOne({
-        action: 'AI_DIAGNOSIS_FALLBACK',
+        action: 'AI_DIAGNOSIS_DEMO',
         user: req.body.user || { name: 'Anonymous Farmer' },
-        details: `Fallback Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
+        details: `Demo Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
         timestamp: new Date()
       });
     }
-
+    return res.json(diagnosis);
+  } catch (error) {
+    console.error('>>> Analyze endpoint error:', error);
+    const diagnosis = getDynamicResponse(req.body.filename, req.body.selectedCrop);
+    if (db) {
+      await db.collection('activity_logs').insertOne({
+        action: 'AI_DIAGNOSIS_ERROR',
+        user: req.body.user || { name: 'Anonymous Farmer' },
+        details: `Error Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
+        timestamp: new Date()
+      });
+    }
     res.json(diagnosis);
   }
 });
+
 
 if (process.env.NODE_ENV === 'production' && !process.env.VERCEL) {
   app.use(express.static(path.join(__dirname, '../frontend/dist')));

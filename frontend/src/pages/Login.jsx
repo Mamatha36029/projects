@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { User, Phone, LogIn, Tractor, Wheat, Leaf, Lock, ArrowRight, Zap, ShoppingBag, ShieldCheck } from 'lucide-react';
 import zxcvbn from 'zxcvbn'; // password strength library
 import { motion } from 'framer-motion';
+import PasswordStrengthBar from '../components/PasswordStrengthBar';
 import loginBg from '../assets/login_hero.jpg';
 
 const Login = () => {
@@ -32,42 +33,41 @@ const Login = () => {
         return;
       }
 
-    // Admin login handling with fixed password
-    if (isAdmin) {
-      const ADMIN_PHONE = '9353475361';
-      const ADMIN_PASS = 'Vishwa@1234';
-      if (phone !== ADMIN_PHONE || password !== ADMIN_PASS) {
-        alert('Invalid admin credentials');
+if (isAdmin) {
+        const ADMIN_PHONE = '9353475361';
+        const ADMIN_PASS = 'Vishwa@1234';
+        if (phone !== ADMIN_PHONE || password !== ADMIN_PASS) {
+          alert('Invalid admin credentials');
+          return;
+        }
+        const adminUser = { name, phone, isAdmin: true };
+        localStorage.setItem('admin', JSON.stringify(adminUser));
+        localStorage.setItem('isAdmin', 'true');
+        navigate('/admin');
         return;
       }
-      const adminUser = { name, phone, isAdmin: true };
-      localStorage.setItem('admin', JSON.stringify(adminUser));
-      localStorage.setItem('isAdmin', 'true');
-      window.location.href = '/admin';
-      return;
-    }
 
-    // Normal user (or signup) flow
-    if ((isSignup ? name : true) && phone.length >= 10 && password) {
-      const user = { name, phone, password };
-      localStorage.setItem('user', JSON.stringify(user));
-      try {
-        await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/activity`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            action: isSignup ? 'USER_SIGNUP' : 'USER_LOGIN',
-            user: { name, phone },
-            details: isSignup ? 'New user signed up' : 'User logged in'
-          })
-        });
-      } catch (err) {
-        console.error('Logging failed', err);
+      // Normal user (or signup) flow
+      if ((isSignup ? name : true) && phone.length >= 10 && password) {
+        const user = { name, phone, password };
+        localStorage.setItem('user', JSON.stringify(user));
+        try {
+          await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/activity`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: isSignup ? 'USER_SIGNUP' : 'USER_LOGIN',
+              user: { name, phone },
+              details: isSignup ? 'New user signed up' : 'User logged in'
+            })
+          });
+        } catch (err) {
+          console.error('Logging failed', err);
+        }
+        navigate('/home');
+      } else {
+        alert('Please enter valid credentials.');
       }
-      window.location.href = '/home';
-    } else {
-      alert('Please enter valid credentials.');
-    }
   };
 
   return (
