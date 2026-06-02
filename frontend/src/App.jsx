@@ -66,7 +66,7 @@ function App() {
               <Link to="/marketplace" className="nav-link">Booked Items</Link>
               <Link to="/marketing" className="nav-link">Insights</Link>
               <Link to="/about" className="nav-link">About Us</Link>
-              <Link to="/admin-login" className="nav-link">Admin Login</Link>
+
               <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.1)' }} />
               <button onClick={handleLogout} className="btn btn-secondary" style={{ padding: '8px 20px', fontSize: '0.9rem', border: '1px solid rgba(239, 68, 68, 0.2)', color: '#fda4af' }}>
                 Sign Out

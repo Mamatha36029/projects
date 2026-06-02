@@ -108,7 +108,7 @@ app.get('/api/admin/stats', async (req, res) => {
       const totalPurchases = await db.collection('activity_logs').countDocuments({
         action: 'PRODUCT_PURCHASE'
       });
-      stats.pesticidesBooked = totalPurchases;
+      stats.pesticidesBooked = 156 + totalPurchases;
 
       // Calculate total sales in real-time (baseline ₹24,500 + purchase totals)
       const purchases = await db.collection('activity_logs').find({
@@ -122,7 +122,7 @@ app.get('/api/admin/stats', async (req, res) => {
           liveSales += parseFloat(match[1]);
         }
       });
-      stats.totalSales = liveSales;
+      stats.totalSales = 24500 + liveSales;
     }
     
     // Fetch recent activity logs
