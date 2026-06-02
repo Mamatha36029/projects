@@ -4,7 +4,7 @@ import { Search, Filter, ShoppingCart, Star, X, Plus, Minus, CreditCard, Banknot
 import { useLocation } from 'react-router-dom';
 import logo from '../assets/agriguard_logo.png';
 import upiQR from '../assets/upi_qr.png';
-const razorpayLink = "https://razorpay.me/@vishwanaththippayanadurgavenk";
+const razorpayLink = "https://projects-frontend1.vercel.app/marketplace";
 import bottlePlaceholder from '../assets/bottle_placeholder.png';
 import pesticideImg from '../assets/pesticide_placeholder.png';
 
