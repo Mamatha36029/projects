@@ -580,29 +580,53 @@ app.get('/api/marketplace', (req, res) => {
 app.post('/api/analyze', async (req, res) => {
   const db = await connectToDatabase();
   try {
-    // Always use demo response to avoid external API failures
-    console.log('>>> Using demo response for image analysis');
-    const diagnosis = getDynamicResponse(req.body.filename, req.body.selectedCrop);
+    const isDemoKey = !apiKey || apiKey.length < 30 || apiKey.startsWith('2b10');
+    if (isDemoKey) {
+      console.log(">>> SMART DEMO RESPONSE Triggered for:", req.body.selectedCrop, req.body.filename);
+      const diagnosis = getDynamicResponse(req.body.filename, req.body.selectedCrop);
+      if (db) {
+        await db.collection('activity_logs').insertOne({
+          action: 'AI_DIAGNOSIS_DEMO',
+          user: req.body.user || { name: 'Anonymous Farmer' },
+          details: `Demo Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
+          timestamp: new Date()
+        });
+      }
+      return res.json(diagnosis);
+    }
+
+    console.log('>>> Processing image with OpenAI (Gemini)');
+    const response = await openai.chat.completions.create({
+      model: "google/gemini-2.0-flash-lite-001",
+      messages: [{ role: "user", content: [{ type: "text", text: "Identify crop and disease. Return JSON: {crop, disease, status, description, treatments: [{step: number, action: string}]}" }, { type: "image_url", image_url: { url: req.body.image } }] }],
+      response_format: { type: "json_object" }
+    });
+    
+    const diagnosis = JSON.parse(response.choices[0].message.content);
+    
     if (db) {
       await db.collection('activity_logs').insertOne({
-        action: 'AI_DIAGNOSIS_DEMO',
+        action: 'AI_DIAGNOSIS',
         user: req.body.user || { name: 'Anonymous Farmer' },
-        details: `Demo Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
+        details: `Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
         timestamp: new Date()
       });
     }
-    return res.json(diagnosis);
+    
+    res.json(diagnosis);
   } catch (error) {
-    console.error('>>> Analyze endpoint error:', error);
+    console.error(">>> FALLBACK TO SMART RESPONSE for:", req.body.selectedCrop, req.body.filename, error);
     const diagnosis = getDynamicResponse(req.body.filename, req.body.selectedCrop);
+    
     if (db) {
       await db.collection('activity_logs').insertOne({
-        action: 'AI_DIAGNOSIS_ERROR',
+        action: 'AI_DIAGNOSIS_FALLBACK',
         user: req.body.user || { name: 'Anonymous Farmer' },
-        details: `Error Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
+        details: `Fallback Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
         timestamp: new Date()
       });
     }
+
     res.json(diagnosis);
   }
 });
