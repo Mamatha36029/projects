@@ -68,47 +68,65 @@ const Home = () => {
     try {
       const reader = new FileReader();
       reader.readAsDataURL(file);
-      reader.onload = async () => {
-        try {
-          const base64Data = reader.result;
-          
+      reader.onload = async (e) => {
+        const img = new Image();
+        img.onload = async () => {
+          try {
+            const canvas = document.createElement('canvas');
+            let width = img.width;
+            let height = img.height;
+            const MAX_SIZE = 800;
 
+            if (width > height && width > MAX_SIZE) {
+              height *= MAX_SIZE / width;
+              width = MAX_SIZE;
+            } else if (height > MAX_SIZE) {
+              width *= MAX_SIZE / height;
+              height = MAX_SIZE;
+            }
 
-          const storedUser = localStorage.getItem('user');
-          const userObj = storedUser ? JSON.parse(storedUser) : null;
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, width, height);
 
-          const response = await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/analyze`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ 
-              image: base64Data,
-              filename: file.name,
-              selectedCrop: selectedCrop,
-              user: userObj
-            })
-          });
+            const base64Data = canvas.toDataURL('image/jpeg', 0.6);
 
-          if (!response.ok) {
-            throw new Error('Our AI experts are busy. Please try again in a moment.');
+            const storedUser = localStorage.getItem('user');
+            const userObj = storedUser ? JSON.parse(storedUser) : null;
+
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/analyze`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ 
+                image: base64Data,
+                filename: file.name,
+                selectedCrop: selectedCrop,
+                user: userObj
+              })
+            });
+
+            if (!response.ok) {
+              throw new Error('Our AI experts are busy. Please try again in a moment.');
+            }
+
+            const parsedData = await response.json();
+
+            setIsAnalyzing(false);
+            navigate('/results', { 
+                state: { 
+                    plant: parsedData.crop || 'Identified Plant',
+                    image: base64Data,
+                    diagnosisData: parsedData
+                } 
+            });
+          } catch (err) {
+            console.error("Inner Error:", err);
+            setIsAnalyzing(false);
+            alert("Error processing image: " + (err.message || err.toString()));
           }
-
-          const parsedData = await response.json();
-
-          setIsAnalyzing(false);
-          navigate('/results', { 
-              state: { 
-                  plant: parsedData.crop || 'Identified Plant',
-                  image: base64Data,
-                  diagnosisData: parsedData
-              } 
-          });
-        } catch (err) {
-          console.error("Inner Error:", err);
-          setIsAnalyzing(false);
-          alert("Error processing image: " + (err.message || err.toString()));
-        }
+        };
+        img.src = e.target.result;
       };
       reader.onerror = () => {
         setIsAnalyzing(false);
