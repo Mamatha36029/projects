@@ -456,7 +456,7 @@ const Marketplace = () => {
                         <QrCode size={32} color={paymentMethod === 'online' ? 'var(--primary)' : 'var(--text-muted)'} />
                         <div>
                           <div style={{ fontWeight: '700', color: 'white' }}>Scan & Pay</div>
-                          <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>UPI / PhonePe</div>
+                          <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Vercel Marketplace</div>
                         </div>
                       </div>
 
