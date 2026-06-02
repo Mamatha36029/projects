@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, ShoppingCart, Star, X, Plus, Minus, CreditCard, Banknote, QrCode, ShoppingBag, ChevronRight, Camera, RefreshCcw } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import logo from '../assets/agriguard_logo.png';
-import vercelQR from '../assets/vercel_qr.png';
+import scannerImg from '../assets/mp4.jpeg';
 const razorpayLink = "https://projects-frontend1.vercel.app/marketplace";
 import bottlePlaceholder from '../assets/bottle_placeholder.png';
 import pesticideImg from '../assets/pesticide_placeholder.png';
