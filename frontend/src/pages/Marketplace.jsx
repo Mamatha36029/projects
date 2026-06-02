@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, ShoppingCart, Star, X, Plus, Minus, CreditCard, Banknote, QrCode, ShoppingBag, ChevronRight, Camera, RefreshCcw } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import logo from '../assets/agriguard_logo.png';
-import upiQR from '../assets/upi_qr.png';
+import vercelQR from '../assets/vercel_qr.png';
 const razorpayLink = "https://projects-frontend1.vercel.app/marketplace";
 import bottlePlaceholder from '../assets/bottle_placeholder.png';
 import pesticideImg from '../assets/pesticide_placeholder.png';
@@ -502,7 +502,7 @@ const Marketplace = () => {
                         </div>
                         
                         <div style={{ position: 'relative', width: '280px', height: '380px', margin: '0 auto', background: 'white', padding: '12px', borderRadius: '24px', overflow: 'hidden' }}>
-                          <img src={upiQR} alt="Razorpay UPI QR" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                          <img src={vercelQR} alt="Vercel Marketplace QR" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                           {/* Animated Scan Line */}
                           <motion.div 
                             animate={{ top: ['0%', '100%', '0%'] }}
@@ -632,7 +632,7 @@ const Marketplace = () => {
                       }}
                     >
                       <div style={{ position: 'relative', width: '280px', height: '380px', margin: '0 auto', background: '#0a0a0a', padding: '12px', borderRadius: '16px', overflow: 'hidden' }}>
-                        <img src={upiQR} alt="PhonePe UPI QR" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                        <img src={vercelQR} alt="Vercel Marketplace QR" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                       </div>
                       <p style={{ marginTop: '16px', color: 'var(--primary)', fontSize: '0.85rem', fontWeight: 'bold' }}>Awaiting secure verification...</p>
                     </motion.div>
