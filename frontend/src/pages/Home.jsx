@@ -2,30 +2,31 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Upload, Camera, ArrowRight, ShieldCheck, Zap, BarChart3, X, RefreshCw } from 'lucide-react';
 
-// Simple leaf‑image check: average green channel should be significantly higher than red & blue
+// Simple leaf‑image check: determine if image is predominantly green
 function isLeafImage(base64) {
   return new Promise((resolve) => {
     const img = new Image();
     img.onload = () => {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
-      const MAX = 100; // small size for quick analysis
+      const MAX = 200;
       const ratio = Math.min(MAX / img.width, MAX / img.height, 1);
       canvas.width = img.width * ratio;
       canvas.height = img.height * ratio;
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
       const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-      let total = 0, green = 0;
+      const totalPixels = data.length / 4;
+      let sumR = 0, sumG = 0, sumB = 0;
       for (let i = 0; i < data.length; i += 4) {
-        const r = data[i];
-        const g = data[i + 1];
-        const b = data[i + 2];
-        total += g;
-        green += g - Math.max(r, b);
+        sumR += data[i];
+        sumG += data[i + 1];
+        sumB += data[i + 2];
       }
-      // if average green dominates red & blue by a margin, consider leaf
-      const avgDiff = green / (data.length / 4);
-      resolve(avgDiff > 20); // threshold empirically chosen
+      const avgR = sumR / totalPixels;
+      const avgG = sumG / totalPixels;
+      const avgB = sumB / totalPixels;
+      // Consider leaf if green channel exceeds the max of red/blue by >20
+      resolve(avgG - Math.max(avgR, avgB) > 20);
     };
     img.onerror = () => resolve(false);
     img.src = base64;
