@@ -10,7 +10,6 @@ const Login = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
-  const [isAdmin, setIsAdmin] = useState(false);
   const [isSignup, setIsSignup] = useState(false);
   const navigate = useNavigate();
   const handleLogin = async (e) => {
@@ -33,14 +32,11 @@ const Login = () => {
         return;
       }
 
-if (isAdmin) {
-        const ADMIN_PHONE = '9353475361';
-        const ADMIN_PASS = 'Vishwa@1234';
-        if (phone !== ADMIN_PHONE || password !== ADMIN_PASS) {
-          alert('Invalid admin credentials');
-          return;
-        }
-        const adminUser = { name, phone, isAdmin: true };
+      // Admin auto-login (no toggle needed)
+      const ADMIN_PHONE = '9353475361';
+      const ADMIN_PASS = 'Vishwa@123';
+      if (phone === ADMIN_PHONE && password === ADMIN_PASS) {
+        const adminUser = { name: 'Admin', phone, isAdmin: true };
         localStorage.setItem('admin', JSON.stringify(adminUser));
         localStorage.setItem('isAdmin', 'true');
         navigate('/admin');
@@ -147,44 +143,10 @@ if (isAdmin) {
           </div>
 
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            {/* Admin / User toggle */}
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '8px' }}>
-              <button
-                type="button"
-                onClick={() => { setIsAdmin(false); }}
-                className="btn"
-                style={{
-                  background: !isAdmin ? 'var(--primary)' : 'transparent',
-                  color: !isAdmin ? 'white' : 'var(--text-muted)',
-                  border: '1px solid var(--primary)',
-                  borderRadius: '8px',
-                  padding: '8px 16px',
-                  cursor: 'pointer',
-                  marginRight: '8px'
-                }}
-              >
-                Farmer Login
-              </button>
-              <button
-                type="button"
-                onClick={() => { setIsAdmin(true); setIsSignup(false); }}
-                className="btn"
-                style={{
-                  background: isAdmin ? 'var(--primary)' : 'transparent',
-                  color: isAdmin ? 'white' : 'var(--text-muted)',
-                  border: '1px solid var(--primary)',
-                  borderRadius: '8px',
-                  padding: '8px 16px',
-                  cursor: 'pointer'
-                }}
-              >
-                Admin Login
-              </button>
-            </div>
+
 
             {/* Farmer Sign Up Toggle */}
-            {!isAdmin && (
-              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '8px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '8px' }}>
                 <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginRight: '8px' }}>
                   {isSignup ? "Already have an account?" : "New to Farmer Portal?"}
                 </span>
@@ -203,7 +165,6 @@ if (isAdmin) {
                   {isSignup ? 'Sign In Here' : 'Register Here'}
                 </button>
               </div>
-            )}
 
             {/* Full Name (only for sign‑up) */}
             {isSignup && (
@@ -243,7 +204,7 @@ if (isAdmin) {
 
             {/* Password */}
             <div className="input-group">
-              <label>{isAdmin ? 'Admin Password' : (isSignup ? 'Create Password' : 'Secure Password')}</label>
+
               <div style={{ position: 'relative' }}>
                 <Lock size={20} style={{ position: 'absolute', left: '16px', top: '16px', color: 'var(--text-muted)' }} />
                 <input 
@@ -258,8 +219,8 @@ if (isAdmin) {
               </div>
             </div>
 
-            {/* Password strength meter (hidden for admin) */}
-            {!isAdmin && password && (
+            {/* Password strength meter */}
+            {password && (
               <div style={{ marginTop: '8px' }}>
                 <PasswordStrengthBar password={password} />
               </div>

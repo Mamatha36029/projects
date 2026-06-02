@@ -1,4 +1,4 @@
-require('dotenv').config({ path: require('path').join(__dirname, '.env') });
+require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
 const express = require('express');
 const cors = require('cors');
 const OpenAI = require('openai');
@@ -13,7 +13,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 const PORT = process.env.PORT || 5000;
 const apiKey = process.env.OPENROUTER_API_KEY || process.env.VITE_OPENROUTER_API_KEY;
-
+console.log('🚀 OPENROUTER_API_KEY loaded, length:', apiKey?.length);
 const openai = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
   apiKey: apiKey || "demo-mode",
@@ -578,24 +578,33 @@ app.get('/api/marketplace', (req, res) => {
 });
 
 app.post('/api/analyze', async (req, res) => {
-  const db = await connectToDatabase();
   try {
-    const isDemoKey = !apiKey || apiKey.length < 30 || apiKey.startsWith('2b10');
-    if (isDemoKey) {
-      console.log(">>> SMART DEMO RESPONSE Triggered for:", req.body.selectedCrop, req.body.filename);
+    let db = null;
+    try { db = await connectToDatabase(); } catch(e) { console.error('DB connect failed in analyze:', e.message); }
+
+    // Check if we have a VALID OpenRouter key (not Anthropic, not demo)
+    const isValidOpenRouterKey = apiKey && apiKey.length > 30 && apiKey.startsWith('sk-or-');
+    
+    if (!isValidOpenRouterKey) {
+      // Use smart demo response (covers missing key, Anthropic key, invalid key, etc.)
+      console.log(">>> SMART DEMO RESPONSE for:", req.body.selectedCrop, req.body.filename, 
+        apiKey ? `(key type: ${apiKey.substring(0,6)}... not OpenRouter)` : '(no key)');
       const diagnosis = getDynamicResponse(req.body.filename, req.body.selectedCrop);
-      if (db) {
-        await db.collection('activity_logs').insertOne({
-          action: 'AI_DIAGNOSIS_DEMO',
-          user: req.body.user || { name: 'Anonymous Farmer' },
-          details: `Demo Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
-          timestamp: new Date()
-        });
-      }
+      try {
+        if (db) {
+          await db.collection('activity_logs').insertOne({
+            action: 'AI_DIAGNOSIS_DEMO',
+            user: req.body.user || { name: 'Anonymous Farmer' },
+            details: `Demo Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
+            timestamp: new Date()
+          });
+        }
+      } catch(dbErr) { console.error('DB log error (non-fatal):', dbErr.message); }
       return res.json(diagnosis);
     }
 
-    console.log('>>> Processing image with OpenAI (Gemini)');
+    // Real OpenRouter API call
+    console.log('>>> Processing image with OpenRouter (Gemini)');
     const response = await openai.chat.completions.create({
       model: "google/gemini-2.0-flash-lite-001",
       messages: [{ role: "user", content: [{ type: "text", text: "Identify crop and disease. Return JSON: {crop, disease, status, description, treatments: [{step: number, action: string}]}" }, { type: "image_url", image_url: { url: req.body.image } }] }],
@@ -604,30 +613,23 @@ app.post('/api/analyze', async (req, res) => {
     
     const diagnosis = JSON.parse(response.choices[0].message.content);
     
-    if (db) {
-      await db.collection('activity_logs').insertOne({
-        action: 'AI_DIAGNOSIS',
-        user: req.body.user || { name: 'Anonymous Farmer' },
-        details: `Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
-        timestamp: new Date()
-      });
-    }
+    try {
+      if (db) {
+        await db.collection('activity_logs').insertOne({
+          action: 'AI_DIAGNOSIS',
+          user: req.body.user || { name: 'Anonymous Farmer' },
+          details: `Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
+          timestamp: new Date()
+        });
+      }
+    } catch(dbErr) { console.error('DB log error (non-fatal):', dbErr.message); }
     
-    res.json(diagnosis);
+    return res.json(diagnosis);
   } catch (error) {
-    console.error(">>> FALLBACK TO SMART RESPONSE for:", req.body.selectedCrop, req.body.filename, error);
-    const diagnosis = getDynamicResponse(req.body.filename, req.body.selectedCrop);
-    
-    if (db) {
-      await db.collection('activity_logs').insertOne({
-        action: 'AI_DIAGNOSIS_FALLBACK',
-        user: req.body.user || { name: 'Anonymous Farmer' },
-        details: `Fallback Diagnosed ${diagnosis.crop} with ${diagnosis.disease}`,
-        timestamp: new Date()
-      });
-    }
-
-    res.json(diagnosis);
+    // ABSOLUTE FALLBACK — guaranteed to return 200
+    console.error(">>> FALLBACK RESPONSE:", error.message);
+    const diagnosis = getDynamicResponse(req.body?.filename, req.body?.selectedCrop);
+    return res.json(diagnosis);
   }
 });
 
@@ -645,7 +647,9 @@ if (process.env.NODE_ENV === 'production' && !process.env.VERCEL) {
 }
 
 if (require.main === module) {
-  app.listen(PORT, () => console.log(`Server live on ${PORT}`));
+  const http = require('http');
+  const server = http.createServer(app);
+  server.listen(PORT, () => console.log(`Server live on ${PORT}`));
 }
 
 module.exports = app;

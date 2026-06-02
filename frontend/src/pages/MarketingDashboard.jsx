@@ -41,14 +41,6 @@ const MarketingDashboard = () => {
           <h1 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '12px' }}>Platform <span className="text-gradient">Insights</span></h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>Operational monitoring and stock analytics.</p>
         </div>
-        <div style={{ display: 'flex', gap: '12px' }}>
-          <button onClick={() => navigate('/admin')} className="glass-button" style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 24px', borderRadius: '12px', background: 'rgba(16, 185, 129, 0.1)', color: 'var(--primary)', border: '1px solid rgba(16, 185, 129, 0.2)', cursor: 'pointer' }}>
-            <ShieldCheck size={18} /> Admin Panel
-          </button>
-          <button onClick={() => navigate('/')} className="glass-button" style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 24px', borderRadius: '12px', background: 'rgba(255,255,255,0.05)', color: 'white', border: '1px solid var(--glass-border)', cursor: 'pointer' }}>
-            <LayoutDashboard size={18} /> Dashboard
-          </button>
-        </div>
       </div>
 
       <div className="grid grid-cols-4" style={{ marginBottom: '48px' }}>
@@ -126,14 +118,7 @@ const MarketingDashboard = () => {
           </div>
         </div>
         
-        <div className="glass" style={{ padding: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-          <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'rgba(16, 185, 129, 0.1)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px' }}>
-            <ShieldCheck size={40} />
-          </div>
-          <h3 style={{ fontSize: '1.8rem', fontWeight: '800', marginBottom: '16px' }}>Admin Restricted Access</h3>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '32px', maxWidth: '340px' }}>Sensitive operational data and inventory management are only accessible to authorized personnel.</p>
-          <button onClick={() => navigate('/admin')} className="btn-primary" style={{ padding: '14px 40px' }}>Enter Admin Portal</button>
-        </div>
+
       </div>
     </div>
   );

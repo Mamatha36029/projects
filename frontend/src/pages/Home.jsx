@@ -1,6 +1,36 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Upload, Camera, ArrowRight, ShieldCheck, Zap, BarChart3, X, RefreshCw } from 'lucide-react';
+
+// Simple leaf‑image check: average green channel should be significantly higher than red & blue
+function isLeafImage(base64) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      const MAX = 100; // small size for quick analysis
+      const ratio = Math.min(MAX / img.width, MAX / img.height, 1);
+      canvas.width = img.width * ratio;
+      canvas.height = img.height * ratio;
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+      let total = 0, green = 0;
+      for (let i = 0; i < data.length; i += 4) {
+        const r = data[i];
+        const g = data[i + 1];
+        const b = data[i + 2];
+        total += g;
+        green += g - Math.max(r, b);
+      }
+      // if average green dominates red & blue by a margin, consider leaf
+      const avgDiff = green / (data.length / 4);
+      resolve(avgDiff > 20); // threshold empirically chosen
+    };
+    img.onerror = () => resolve(false);
+    img.src = base64;
+  });
+}
 import frontBg from '../assets/front_page_bg.png';
 
 import { motion } from 'framer-motion';
@@ -91,6 +121,13 @@ const Home = () => {
             ctx.drawImage(img, 0, 0, width, height);
 
             const base64Data = canvas.toDataURL('image/jpeg', 0.6);
+          // Verify leaf image before sending to backend
+          const isLeaf = await isLeafImage(base64Data);
+          if (!isLeaf) {
+            alert('Please upload a clear leaf image. Other objects are not supported.');
+            setIsAnalyzing(false);
+            return;
+          }
 
             const storedUser = localStorage.getItem('user');
             const userObj = storedUser ? JSON.parse(storedUser) : null;

@@ -62,7 +62,6 @@ const Marketplace = () => {
   const [paymentMethod, setPaymentMethod] = useState('online');
   const [bookingPaymentMethod, setBookingPaymentMethod] = useState('online');
   const [products, setProducts] = useState(samplePesticides);
-  const [datasets, setDatasets] = useState([]);
   const [activeTab, setActiveTab] = useState('pesticides');
   const [loading, setLoading] = useState(true);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -80,20 +79,11 @@ const Marketplace = () => {
     // Fetch products (pesticides) and datasets
     const fetchData = async () => {
       try {
-        const [pestsRes, datasetsRes] = await Promise.all([
-          fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/pesticides`),
-          fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/datasets`)
-        ]);
+        const pestsRes = await fetch(`${import.meta.env.VITE_BACKEND_URL || ''}/api/pesticides`);
         const pestsData = await pestsRes.json();
-        const datasetsData = await datasetsRes.json();
-        console.log('Fetched pesticides data:', pestsData);
-        console.log('Fetched datasets data:', datasetsData);
         setProducts(pestsData);
-        setDatasets(datasetsData);
       } catch (error) {
         console.error('Error fetching data for marketplace:', error);
-        // Keep existing sample data if backend fetch fails
-        // No need to clear products or datasets
       } finally {
         setLoading(false);
       }
@@ -102,14 +92,17 @@ const Marketplace = () => {
     fetchData();
   }, []);
 
-  const currentList = activeTab === 'pesticides' ? products : datasets;
-  const filteredProducts = currentList.filter(p => {
+  const filteredProducts = products.filter(p => {
     const name = (p.name?.toLowerCase() || '');
     const target = (p.target?.toLowerCase() || '');
-    const isDataset = activeTab === 'datasets';
-    const exclude = isDataset && (name.includes('pathology dataset') || name.includes('tropical map') || name.includes('tropical crop disease'));
-    return !exclude && (name.includes(searchTerm.toLowerCase()) || target.includes(searchTerm.toLowerCase()));
+    return name.includes(searchTerm.toLowerCase()) || target.includes(searchTerm.toLowerCase());
   });
+
+  useEffect(() => {
+    const totalItems = cart.reduce((count, item) => count + item.quantity, 0);
+    localStorage.setItem('headerCartCount', totalItems.toString());
+    window.dispatchEvent(new Event('storage'));
+  }, [cart]);
 
   const addToCart = (product) => {
     setCart(prev => {
@@ -228,25 +221,7 @@ const Marketplace = () => {
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: '12px', marginBottom: '40px', background: 'rgba(255,255,255,0.03)', padding: '6px', borderRadius: '14px', width: 'fit-content' }}>
-        {['pesticides', 'datasets'].map(tab => (
-          <button 
-            key={tab}
-            className={`btn`}
-            style={{ 
-              background: activeTab === tab ? 'var(--primary)' : 'transparent',
-              color: activeTab === tab ? 'white' : 'var(--text-muted)',
-              padding: '10px 24px',
-              borderRadius: '10px',
-              fontSize: '0.95rem',
-              fontWeight: '600'
-            }}
-            onClick={() => setActiveTab(tab)}
-          >
-            {tab.charAt(0).toUpperCase() + tab.slice(1)}
-          </button>
-        ))}
-      </div>
+
 
       <div className="grid grid-cols-3" style={{ gap: '32px' }}>
         {filteredProducts.map((product, index) => (
@@ -336,7 +311,7 @@ const Marketplace = () => {
                   style={{ flex: '3 1 150px', borderRadius: '12px', fontWeight: '700' }} 
                   onClick={() => handleBuyNow(product)}
                 >
-                  Quick Purchase
+                  Purchase
                 </motion.button>
                 <motion.button 
                   whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
@@ -683,6 +658,11 @@ const Marketplace = () => {
                     } catch (err) {
                       console.error('Failed to log service booking', err);
                     }
+
+                    // Update booked items count for header
+                    const currentBookedCount = parseInt(localStorage.getItem('bookedItemsCount') || '0', 10);
+                    localStorage.setItem('bookedItemsCount', (currentBookedCount + 1).toString());
+                    window.dispatchEvent(new Event('storage'));
 
                     alert(`Booking confirmed for ${selectedProductForBooking?.name} on ${bookingDate}! Our expert will contact you shortly.`);
                     setIsBookingOpen(false);
