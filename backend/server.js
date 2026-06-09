@@ -1,4 +1,10 @@
 require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
+const dns = require('dns');
+try {
+  dns.setServers(['8.8.8.8', '8.8.4.4']);
+} catch (e) {
+  console.log('Failed to set DNS servers:', e);
+}
 const express = require('express');
 const cors = require('cors');
 const OpenAI = require('openai');
@@ -24,6 +30,7 @@ const { MongoClient } = require('mongodb');
 const mongoUri = process.env.MONGODB_URI;
 let cachedDb = null;
 let cachedClient = null;
+let dbConnectionFailed = false;
 
 async function connectToDatabase() {
   if (cachedDb) {
@@ -31,6 +38,9 @@ async function connectToDatabase() {
   }
   if (!mongoUri) {
     console.log('No MONGODB_URI provided. Skipping DB connection.');
+    return null;
+  }
+  if (dbConnectionFailed) {
     return null;
   }
 
@@ -68,6 +78,7 @@ async function connectToDatabase() {
     return db;
   } catch (err) {
     console.error('MongoDB connection error:', err);
+    dbConnectionFailed = true;
     return null;
   }
 }

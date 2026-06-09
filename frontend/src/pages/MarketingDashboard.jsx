@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Package, AlertTriangle, ArrowUpRight, ArrowDownRight, Database, ShieldCheck, LayoutDashboard } from 'lucide-react';
+import { Users, Package, AlertTriangle, ArrowUpRight, ArrowDownRight, ShieldCheck, LayoutDashboard } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const MarketingDashboard = () => {
@@ -43,7 +43,7 @@ const MarketingDashboard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-4" style={{ marginBottom: '48px' }}>
+      <div className="grid grid-cols-3" style={{ marginBottom: '48px' }}>
         <motion.div whileHover={{ y: -5 }} className="glass" style={{ padding: '32px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
             <div style={{ color: 'var(--primary)', background: 'rgba(16, 185, 129, 0.1)', padding: '12px', borderRadius: '12px' }}>
@@ -57,18 +57,6 @@ const MarketingDashboard = () => {
           <h3 style={{ fontSize: '2rem', fontWeight: '700' }}>{metrics.totalUsers.toLocaleString()}</h3>
         </motion.div>
 
-        <motion.div whileHover={{ y: -5 }} className="glass" style={{ padding: '32px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
-            <div style={{ color: 'var(--secondary)', background: 'rgba(56, 189, 248, 0.1)', padding: '12px', borderRadius: '12px' }}>
-              <Database size={24} />
-            </div>
-            <div style={{ color: 'var(--secondary)', display: 'flex', alignItems: 'center', fontSize: '0.85rem', fontWeight: 'bold' }}>
-              38 Classes
-            </div>
-          </div>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>Dataset (PlantVillage)</p>
-          <h3 style={{ fontSize: '2rem', fontWeight: '700' }}>70,295 <span style={{ fontSize: '1rem', color: 'var(--text-muted)' }}>imgs</span></h3>
-        </motion.div>
 
         <motion.div whileHover={{ y: -5 }} className="glass" style={{ padding: '32px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
@@ -97,29 +85,7 @@ const MarketingDashboard = () => {
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-2">
-        <div className="glass" style={{ padding: '40px' }}>
-          <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '24px' }}>Dataset Integration</h3>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            {[
-              { label: 'PlantVillage Dataset', status: 'Fully Integrated', count: '38 Classes' },
-              { label: 'Cloud Storage', status: 'Connected', count: '1.2 TB' }
-            ].map((item, i) => (
-              <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px' }}>
-                <div>
-                  <p style={{ fontWeight: 'bold', marginBottom: '2px' }}>{item.label}</p>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--primary)' }}>{item.status}</p>
-                </div>
-                <div style={{ textAlign: 'right' }}>
-                  <p style={{ fontWeight: '600' }}>{item.count}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        
 
-      </div>
     </div>
   );
 };
